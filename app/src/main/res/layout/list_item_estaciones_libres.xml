@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/Widget.Material3.CardView.Filled"
+    android:backgroundTint="?attr/colorSurface"
+    app:cardCornerRadius="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/robotoflex"
+            android:gravity="center_vertical"
+            android:letterSpacing="0.03"
+            android:lineHeight="24sp"
+            android:lineSpacingExtra="5sp"
+            android:textColor="@color/title_toolbar_custom"
+
+            android:textFontWeight="600"
+            android:textSize="@dimen/text_subtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/numEmployee"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Luis Pérez Pérez" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/numEmployee"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="@dimen/margin_16"
+            android:alpha="0.87"
+            android:background="@drawable/num_employe_estaciones_libres"
+            android:fontFamily="@font/robotoflex"
+            android:gravity="center_vertical|center"
+            android:letterSpacing="0.03"
+            android:lineHeight="@dimen/text_subtitle"
+            android:lineSpacingExtra="2sp"
+            android:minWidth="52dp"
+            android:paddingHorizontal="4dp"
+            android:textColor="@color/numEmployee"
+            android:textFontWeight="600"
+            android:textSize="@dimen/text_body"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="1234567890" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name">
+
+            <ImageView
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:src="@drawable/login"/>
+
+            <ImageView
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:visibility="gone"
+                android:src="@drawable/logout"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textFontWeight="600"
+                android:fontFamily="@font/robotoflex"
+                android:gravity="center_vertical"
+                android:letterSpacing="0.04"
+                android:lineHeight="24sp"
+                android:lineSpacingExtra="5sp"
+                android:textColor="@color/dateEstacioneslibres"
+                android:textSize="@dimen/text_header"
+                tools:text="04/10/ a las 18:05" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginBottom="@dimen/margin_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearDate">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:src="@drawable/location_on" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/bssid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textFontWeight="600"
+                android:fontFamily="@font/robotoflex"
+                android:gravity="center_vertical"
+                android:letterSpacing="0.03"
+                android:lineHeight="16sp"
+                android:lineSpacingExtra="2sp"
+                android:textColor="@color/dateEstacioneslibres"
+                android:textSize="@dimen/text_header"
+                tools:text="BSSID" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/materialDivider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,3 @@
+Es el módulo que en conjunto con RS, DO y CE da respuesta a los retos organizacionales que se presentan día con día, en relación a los procesos internos de la empresa.
+
+Permite asignar un Supervisor para la administración de personal en temas como: Control de tiempos, Capacitación, Evaluaciones, Autorización de ausentismos, Solicitud de requisiciones, etcétera.

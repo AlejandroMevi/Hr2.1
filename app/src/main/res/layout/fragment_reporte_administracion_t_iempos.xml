@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/margin_large"
+        android:layout_marginVertical="@dimen/margin_normal"
+        android:animateLayoutChanges="true">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/titleReport"
+            style="@style/text_title_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/menuAT_caption" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_aniio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/titleReport">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtAnio"
+                style="@style/Caption_Regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ATAnio" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/il_anio"
+                style="@style/ButtonOutlineRHD"
+                android:layout_width="match_parent"
+                android:text="@string/hind_anio" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/captionReport"
+            style="@style/text_title_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:text="@string/rvacacionesca"
+            app:layout_constraintTop_toBottomOf="@+id/layout_aniio" />
+
+        <include
+            android:id="@+id/et_input"
+            layout="@layout/general_edit_text_date_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/captionReport" />
+
+        <include
+            android:id="@+id/et_output"
+            layout="@layout/general_edit_text_date_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline6"
+            app:layout_constraintTop_toBottomOf="@+id/captionReport" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/captionDepartamento"
+            style="@style/text_title_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/vrpcaDepartamento"
+            app:layout_constraintTop_toBottomOf="@+id/et_input" />
+
+        <include
+            android:id="@+id/sp_area"
+            layout="@layout/general_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/captionDepartamento" />
+
+        <include
+            android:id="@+id/sp_centro"
+            layout="@layout/general_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/sp_area" />
+
+        <include
+            android:id="@+id/sp_linea"
+            layout="@layout/general_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/sp_centro" />
+
+        <include
+            android:id="@+id/sp_dialogZona"
+            layout="@layout/general_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/sp_linea" />
+
+        <include
+            android:id="@+id/sp_dialogCodid"
+            layout="@layout/general_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/sp_dialogZona" />
+
+
+        <include
+            android:id="@+id/sp_dialogTurno"
+            layout="@layout/general_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/sp_dialogCodid" />
+
+        <include
+            android:id="@+id/sp_dialogRol"
+            layout="@layout/general_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/sp_dialogTurno" />
+
+        <include
+            android:id="@+id/sp_dialogTipoRep"
+            layout="@layout/general_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/sp_dialogRol" />
+
+        <include
+            android:id="@+id/sp_supervisor"
+            layout="@layout/general_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/sp_dialogTipoRep" />
+
+        <include
+            android:id="@+id/sp_grupos"
+            layout="@layout/general_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/sp_supervisor" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/captionConcepto"
+            style="@style/Caption_Regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:text="@string/fpConcepto"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/sp_grupos" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/il_Concepto"
+            style="@style/ButtonRHD"
+            android:layout_width="match_parent"
+            android:text="@string/conceptos"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/captionConcepto" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/captionUsuarios"
+            style="@style/text_title_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:text="@string/empleados"
+            app:layout_constraintTop_toBottomOf="@+id/il_Concepto" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_list_employee"
+            style="@style/ButtonOutlineRHD"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_width="match_parent"
+            android:text="@string/seleccionar_empleados"
+            app:layout_constraintTop_toBottomOf="@+id/captionUsuarios" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/forma"
+            style="@style/text_title_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:text="@string/ATFormato_de_Reporte"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/btn_list_employee" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/radioIPE"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:checked="false"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:text="@string/ATImpresion_por_Empleado"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/forma" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/radioEI"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:checked="false"
+            android:text="@string/ATEmpleados_inactivos"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/radioIPE" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/radioMR"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:checked="false"
+            android:text="@string/ATMR_activo"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/radioEI" />
+
+        <TextView
+            android:id="@+id/textView23"
+            style="@style/Caption_Regular"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@string/ATVisualizacion_de_informacion"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/radioMR" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/radioGeneral"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:button="@android:drawable/radiobutton_off_background"
+            android:checked="true"
+            android:text="@string/ATGeneral"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/radioDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:button="@android:drawable/radiobutton_off_background"
+            android:checked="false"
+            android:text="@string/ATDetalle"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/radioGeneral" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/captionFormato"
+            style="@style/text_title_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:text="@string/vrpcaFormato"
+            app:layout_constraintTop_toBottomOf="@+id/radioDetalle" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/radioTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/total_dep"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/captionFormato" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/radioDescripcionEmp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="@string/ATTipo_de_reporte_hint"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/radioTotal" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/radioButtonCuenta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:checked="false"
+            android:text="@string/por_estructura_departamental"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/radioDescripcionEmp" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/radioNegoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/negociaciones_horario"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/radioButtonCuenta" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/radioTiempoExtra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/registro_tiempos_extras"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/radioNegoc" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/radioButtonRetardos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="@string/vrpcaRetardos"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioTiempoExtra" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_radio_holyday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/radioButtonRetardos">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/captionFormatoDos"
+                style="@style/text_title_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vrpcaFormato"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/radioButtonProgramacion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/vrhcaProgramacion"
+                app:layout_constraintEnd_toStartOf="@+id/guideline7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/captionFormatoDos" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/radioButtonSalidas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/vrhcaSalidas"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toBottomOf="@+id/captionFormatoDos" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/sendPdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/descarga"
+            android:tintMode="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioButtonRetardos"
+            app:maxImageSize="40dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

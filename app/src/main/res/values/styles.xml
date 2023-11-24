@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="NavigationViewRHD" parent="@style/Widget.Material3.NavigationView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="itemPaddingTop">5dp</item>
+        <item name="itemPaddingBottom">5dp</item>
+        <item name="elevation">10dp</item>
+    </style>
+    <!--Toolbar-->
+    <style name="ToolbarRHD" parent="@style/Widget.Material3.Toolbar.OnSurface">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Toolbar</item>
+        <item name="android:titleTextAppearance">@style/TitleToolbar</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Toolbar" parent="">
+        <item name="colorControlNormal">@color/principal</item>
+    </style>
+
+    <!--Button Style-->
+    <style name="ButtonRHD" parent="Widget.Material3.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">@color/principal</item>
+        <item name="cornerRadius">5dp</item>
+    </style>
+
+    <style name="ButtonOutlineRHD" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textColor">@color/principal</item>
+        <item name="strokeColor">@color/principal</item>
+        <item name="cornerRadius">5dp</item>
+    </style>
+
+    <style name="ButtonDialogRHD" parent="Widget.Material3.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:backgroundTint">@color/principal</item>
+        <item name="cornerRadius">5dp</item>
+    </style>
+
+    <style name="ButtonDialogPositiveRHD" parent="Widget.Material3.Button.TextButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">@color/principal</item>
+    </style>
+
+    <style name="Icon_Tint" parent="@style/MaterialAlertDialog.MaterialComponents.Title.Icon">
+        <item name="android:tint">@color/principal</item>
+    </style>
+
+    <style name="ButtonTextRHD" parent="Widget.Material3.Button.TextButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textColor">@color/principal</item>
+    </style>
+
+    <style name="ButtonAlta" parent="Widget.Material3.Button.TextButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/principal</item>
+    </style>
+
+    <style name="ButtonTextDialogRHD" parent="Widget.Material3.Button.TextButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/principal</item>
+    </style>
+
+    <style name="ButtonFilterEmployee" parent="Widget.Material3.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/principal</item>
+        <item name="strokeColor">@color/principal</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="cornerRadius">@dimen/margin_8</item>
+    </style>
+    <!--Input Layout Style-->
+    <style name="InputLayoutRHD" parent="Widget.Material3.TextInputLayout.OutlinedBox.Dense">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="hintTextColor">@color/principal</item>
+    </style>
+
+    <style name="InputLayoutSpinnerRHD" parent="Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="hintTextColor">@color/principal</item>
+    </style>
+
+    <style name="ItemActived">
+        <item name="itemIconTint">@color/principal</item>
+    </style>
+    <!--Dialog Style-->
+    <style name="MonthPickerDialogStyle" parent="ThemeOverlay.Material3.MaterialCalendar">
+        <item name="monthBgColor">@color/white</item>
+        <item name="monthBgSelectedColor">@color/principal</item>
+        <item name="monthFontColorSelected">@color/white</item>
+        <item name="monthFontColorNormal">@color/principal</item>
+        <item name="monthFontColorDisabled">@color/light_gray</item>
+        <item name="headerBgColor">@color/white</item>
+        <item name="headerFontColorSelected">@color/black</item>
+        <item name="headerFontColorNormal">@color/black</item>
+        <item name="headerTitleColor">@color/principal</item>
+        <item name="cornerRadius">20dp</item>
+        <item name="dialogActionButtonColor">@color/principal</item>
+    </style>
+
+    <style name="AlertDialogCustom" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="buttonBarPositiveButtonStyle">@style/ButtonDialogRHD</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/SubHeading</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/Caption_Regular</item>
+        <item name="android:gravity">center</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="radioButtonStyle">@color/principal</item>
+    </style>
+
+    <style name="DialogCalendarRHD" parent="@style/ThemeOverlay.Material3.MaterialCalendar">
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="materialCalendarDay">@style/MaterialCalendar.Day</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/SubHeading</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/Caption_Regular</item>
+    </style>
+
+    <style name="MaterialCalendar.Day" parent="Widget.Material3.MaterialCalendar.Day">
+        <item name="backgroundTint">@color/principal</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TimePicker" parent="ThemeOverlay.Material3.MaterialTimePicker">
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="materialTimePickerTitleStyle">@style/SubHeading</item>
+        <item name="materialClockStyle">@style/TimePicker.Clock</item>
+    </style>
+
+    <style name="TimePicker.Clock" parent="Widget.Material3.MaterialTimePicker.Clock">
+        <item name="android:backgroundTint">@color/white</item>
+    </style>
+
+    <style name="DialogTimeRHD" parent="Widget.Material3.MaterialTimePicker.Clock">
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="clockHandColor">@color/principal</item>
+        <item name="clockNumberTextColor">@color/principal</item>
+    </style>
+
+    <style name="AlertDialogCustomList" parent="@style/ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="buttonBarPositiveButtonStyle">@style/ButtonDialogRHD</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/SubHeading</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/Caption_Regular</item>
+        <item name="android:gravity">center</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="radioButtonStyle">@color/principal</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">@color/principal</item>
+    </style>
+
+    <style name="WhiteAccent" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorAccent">@android:color/white</item>
+    </style>
+
+    <style name="DialogTitleStyle">
+        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:textColor">@color/mBlack</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="DialogMessageStyle">
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:layout_marginRight">25dp</item>
+        <item name="android:layout_marginLeft">25dp</item>
+        <item name="android:textColor">@color/mBlack</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="DialogOkButtonStyle">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:background">@drawable/shape_ok_button_dialog</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="DialogLeftBorderOkButtonStyle">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:background">@drawable/shape_ok_left_border_button_dialog</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="DialogNegativeButtonStyle">
+        <item name="android:textColor">@color/mTurqoise</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:background">@drawable/shape_no_button_dialog</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="ListaSolicitudesCardViewRHD" parent="Widget.Material3.CardView.Filled">
+        <item name="cardCornerRadius">10dp</item>
+        <item name="cardElevation">3dp</item>
+        <item name="android:layout_marginTop">@dimen/margin_small</item>
+        <item name="android:layout_marginBottom">@dimen/margin_small</item>
+        <item name="android:layout_marginStart">2dp</item>
+        <item name="android:layout_marginEnd">2dp</item>
+    </style>
+
+    <style name="chFilterEmployee" parent="Widget.MaterialComponents.Chip.Entry">
+        <item name="fontWeight">500</item>
+        <item name="android:textColor">@color/nameEmployee</item>
+        <item name="chipBackgroundColor">@color/backFilter</item>
+        <item name="chipStrokeColor">@color/principal</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="closeIcon">@drawable/close</item>
+        <item name="closeIconTint">@color/principal</item>
+        <item name="chipCornerRadius">@dimen/margin_8</item>
+        <item name="iconStartPadding">@dimen/margin_8</item>
+        <item name="iconEndPadding">@dimen/margin_8</item>
+        <item name="android:checkable">false</item>
+        <item name="android:text">Jon Snow</item>
+        <item name="chipIcon">@drawable/jon</item>
+    </style>
+
+    <!--Text Style-->
+
+    <style name="Display1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">40sp</item>
+        <item name="fontWeight">300</item>
+        <item name="lineHeight">56sp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="fontFamily">@font/robotoflex</item>
+    </style>
+
+    <style name="Display2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">32sp</item>
+        <item name="lineHeight">48dp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="fontFamily">@font/robotoflex</item>
+        <item name="fontWeight">400</item>
+    </style>
+
+    <style name="Display3">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">28sp</item>
+        <item name="lineHeight">40sp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="fontFamily">@font/robotoflex</item>
+        <item name="fontWeight">400</item>
+    </style>
+
+    <style name="Display4">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24sp</item>
+        <item name="lineHeight">32sp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="fontFamily">@font/robotoflex</item>
+        <item name="fontWeight">400</item>
+    </style>
+
+    <style name="HeadLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="lineHeight">24sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="fontFamily">@font/robotoflex</item>
+        <item name="fontWeight">500</item>
+    </style>
+
+    <style name="Title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="lineHeight">24sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="fontFamily">@font/robotoflex</item>
+        <item name="fontWeight">600</item>
+    </style>
+
+    <style name="SubHeading">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">24sp</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="fontFamily">@font/robotoflex</item>
+        <item name="fontWeight">400</item>
+    </style>
+
+    <style name="Body1_Regular">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">24sp</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="fontFamily">@font/robotoflex</item>
+        <item name="fontWeight">400</item>
+    </style>
+
+    <style name="Body1_semibold">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">24sp</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="fontFamily">@font/robotoflex</item>
+        <item name="fontWeight">600</item>
+    </style>
+
+    <style name="Body1_bold">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">24sp</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="fontFamily">@font/robotoflex</item>
+        <item name="fontWeight">700</item>
+    </style>
+
+    <style name="Body1_regular_italic">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">24sp</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="fontFamily">@font/robotoflex</item>
+        <item name="fontWeight">400</item>
+    </style>
+
+    <style name="Body1_semibold_italic">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">24sp</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="fontFamily">@font/robotoflex</item>
+        <item name="fontWeight">600</item>
+    </style>
+
+    <style name="Body1_italic">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">24sp</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="fontFamily">@font/robotoflex</item>
+        <item name="fontWeight">700</item>
+    </style>
+
+    <style name="Body2_regular">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">24sp</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="fontFamily">@font/robotoflex</item>
+        <item name="fontWeight">400</item>
+    </style>
+
+    <style name="Body2_semibold">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">24sp</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="fontFamily">@font/robotoflex</item>
+        <item name="fontWeight">600</item>
+    </style>
+
+    <style name="Body2_bold">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">24sp</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="fontFamily">@font/robotoflex</item>
+        <item name="fontWeight">700</item>
+    </style>
+
+    <style name="Body2_regular_italic">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">24sp</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="fontFamily">@font/robotoflex</item>
+        <item name="fontWeight">400</item>
+    </style>
+
+    <style name="Body2_semibold_italic">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">24sp</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="fontFamily">@font/robotoflex</item>
+        <item name="fontWeight">600</item>
+    </style>
+
+    <style name="Body2_bold_italic">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">24sp</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="fontFamily">@font/robotoflex</item>
+        <item name="fontWeight">700</item>
+    </style>
+
+    <style name="Caption_Regular">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">16sp</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="fontFamily">@font/robotoflex</item>
+        <item name="fontWeight">400</item>
+    </style>
+
+    <style name="Caption_semibold">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">16sp</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="fontWeight">600</item>
+    </style>
+
+    <style name="Overline">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">10sp</item>
+        <item name="lineHeight">16sp</item>
+        <item name="android:letterSpacing">0.15</item>
+        <item name="fontFamily">@font/robotoflex</item>
+        <item name="fontWeight">700</item>
+    </style>
+
+    <style name="Boton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">20sp</item>
+        <item name="android:letterSpacing">0.07</item>
+        <item name="fontFamily">@font/robotoflex</item>
+        <item name="fontWeight">600</item>
+    </style>
+
+    <style name="TitleToolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="lineHeight">24sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="fontFamily">@font/robotoflex</item>
+        <item name="fontWeight">600</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">@dimen/margin_16</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:lineSpacingExtra">3sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="alpha">0.87</item>
+        <item name="titleTextColor">@color/title_toolbar_custom</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="AppTheme.FullScreenDialog" parent="Theme.Material3.Light.Dialog">
+        <item name="colorPrimaryDark">@color/principal</item>
+        <item name="colorAccent">@color/principal</item>
+        <item name="colorPrimary">@color/principal</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="actionMenuTextColor">@color/white</item>
+    </style>
+
+    <style name="AppTheme.Slide">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+
+    <style name="text_title_bold">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/selecttxt</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:lineSpacingExtra">5sp</item>
+        <item name="android:translationY">-2.62sp</item>
+        <item name="lineHeight">24sp</item>
+        <item name="fontFamily">@font/robotoflex</item>
+    </style>
+
+</resources>

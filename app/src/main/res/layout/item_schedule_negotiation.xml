@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.Material3.CardView.Filled"
+    android:backgroundTint="?attr/colorSurface"
+    app:cardCornerRadius="0dp"
+    android:id="@+id/cardviewlista"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/layoutDateStart"
+            style="@style/Body2_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fecha_inicio"
+            android:layout_margin="@dimen/margin_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/layoutDateEnd"
+            style="@style/Body2_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fecha_termino"
+            android:layout_marginStart="@dimen/margin_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateStart" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/layoutRolTurn"
+            style="@style/Body2_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rol_de_turnos"
+            android:layout_marginStart="@dimen/margin_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateEnd" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/layoutcategory"
+            style="@style/Body2_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/categoria"
+            android:layout_marginStart="@dimen/margin_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rolTurn" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/layoutZone"
+            style="@style/Body2_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zona"
+            android:layout_marginStart="@dimen/margin_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/category" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="layoutZone,layoutRolTurn,layoutDateStart,layoutDateEnd,layoutcategory" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/dateStart"
+            style="@style/Body2_bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_small"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier3"
+            app:layout_constraintTop_toTopOf="@+id/layoutDateStart"
+            tools:text="01/01/2023" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/dateEnd"
+            style="@style/Body2_bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_small"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier3"
+            app:layout_constraintTop_toTopOf="@+id/layoutDateEnd"
+            tools:text="02/01/2023" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/rolTurn"
+            style="@style/Body2_bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_small"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier3"
+            app:layout_constraintTop_toTopOf="@+id/layoutRolTurn"
+            tools:text="Rol Lineal" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/category"
+            style="@style/Body2_bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_small"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier3"
+            app:layout_constraintTop_toTopOf="@+id/layoutcategory"
+            tools:text="SUPQA" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/zona"
+            style="@style/Body2_bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_small"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier3"
+            app:layout_constraintTop_toTopOf="@+id/layoutZone"
+            tools:text="Metalvx" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/zona" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

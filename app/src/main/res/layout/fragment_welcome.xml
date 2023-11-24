@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/welcomeName"
+        style="@style/Body2_semibold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E8EEF8"
+        android:gravity="center"
+        android:paddingVertical="@dimen/margin_8"
+        android:maxLines="1"
+        android:ellipsize="marquee"
+        android:fadingEdge="horizontal"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:text="@string/supervisor"
+        android:textColor="#7E90A0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:paddingHorizontal="@dimen/margin_large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeName">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/welcomeEstadistica"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="@dimen/margin_24"
+            android:letterSpacing="0.03"
+            android:lineHeight="24sp"
+            android:lineSpacingExtra="5sp"
+            android:text="@string/welcome_est"
+            android:textColor="#405B75"
+            android:textFontWeight="500"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/btn_refresh"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UnusedAttribute" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_refresh"
+            style="?attr/materialIconButtonFilledTonalStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:backgroundTint="?attr/colorSurface"
+            android:contentDescription="@string/faDias"
+            app:icon="@drawable/ic_refresh"
+            app:layoutDescription="@string/faDias"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/chartBar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_16"
+            app:layout_constraintBottom_toTopOf="@+id/guideline10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeEstadistica">
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/graficChard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/titleListaRetardos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_24"
+            android:fontFamily="@font/robotoflex"
+            android:gravity="center_vertical|center_horizontal"
+            android:letterSpacing="0.03"
+            android:lineHeight="24sp"
+            android:lineSpacingExtra="5sp"
+            android:text="@string/ATRelacion_inasistencia"
+            android:textColor="#405B75"
+            android:textFontWeight="500"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/chartBar"
+            app:layout_constraintStart_toStartOf="@+id/chartBar"
+            app:layout_constraintTop_toBottomOf="@+id/guideline10"
+            tools:ignore="UnusedAttribute" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listEmployee"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_normal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleListaRetardos"
+            tools:layout_editor_absoluteX="20dp"
+            tools:listitem="@layout/list_item_retardos_employee" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

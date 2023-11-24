@@ -1,0 +1,30 @@
+package com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.timeManagement.generalInformation.data.models
+
+data class InfoGenralRequest(
+    var cia: String = "",
+    var numEmp: String = "",
+    var fechaAplicacion: String = "",
+    var gafete: String = "",
+    var calendario: String = "",
+    var rolHorario: String = "",
+    var turno: String = "",
+    var dom: String = "",
+    var lun: String = "",
+    var mar: String = "",
+    var mie: String = "",
+    var jue: String = "",
+    var vie: String = "",
+    var sab: String = "",
+    var cond1:String = "",
+    var cond2:String = "",
+    var cond3:String = "",
+    var cond4:String = "",
+    var cond5:String = "",
+    var cond6:String = "",
+    var cond7:String = "",
+    var cond8:String = "",
+    var cond9:String = "",
+    var cond10:String = "",
+    var status:String = "",
+    var usuario: String = ""
+)

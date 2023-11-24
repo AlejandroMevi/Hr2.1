@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="period">Periodo:</string>
+    <string name="rol_horario">Rol Horario:</string>
+    <string name="rol_de_turnos">Rol de Turnos:</string>
+    <string name="agregar_estacion">Agregar estacion</string>
+</resources>

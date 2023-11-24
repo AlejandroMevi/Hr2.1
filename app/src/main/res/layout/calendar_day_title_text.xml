@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:background="@color/white"
+    android:textColor="@color/numDays"
+    android:textSize="16sp"
+    android:lineHeight="24sp"
+    android:letterSpacing="0.03"
+    android:lineSpacingExtra="5sp"
+    android:padding="2dp"
+    android:layout_weight="1"
+    android:layout_gravity="center"
+    android:gravity="center_vertical|center_horizontal" />

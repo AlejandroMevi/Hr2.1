@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="@dimen/margin_large"
+    android:layout_marginVertical="@dimen/margin_normal"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profilePicture"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/user_icon_big"
+        app:circularflow_radiusInDP="50"
+        android:layout_marginTop="@dimen/margin_extra_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/usernameTv"
+        style="@style/Title"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:text="@string/fragment_opciones"
+        android:layout_marginTop="@dimen/margin_normal"
+        app:layout_constraintTop_toBottomOf="@+id/profilePicture" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameTv">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:animateLayoutChanges="true">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/assist_control"
+                style="@style/Widget.Material3.CardView.Filled"
+                android:backgroundTint="?attr/colorSurface"
+                app:cardCornerRadius="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/icon_control_times__1_"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/Body2_bold"
+                            android:text="@string/menup_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/arrow_1"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_margin="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_arrow_down"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_assist_control"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="0dp"
+                        android:visibility="gone"
+                        tools:listitem="@layout/item_menu"
+                        android:overScrollMode="never"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/time_management"
+                style="@style/Widget.Material3.CardView.Filled"
+                android:backgroundTint="?attr/colorSurface"
+                app:cardCornerRadius="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/icon_clock_menu_2"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/Body2_bold"
+                            android:text="@string/menup_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/arrow_2"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_margin="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_arrow_down"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_time_management"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="0dp"
+                        android:visibility="gone"
+                        android:overScrollMode="never"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/settings"
+                style="@style/Widget.Material3.CardView.Filled"
+                android:backgroundTint="?attr/colorSurface"
+                app:cardCornerRadius="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/configuraciones"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/Body2_bold"
+                            android:text="@string/menup_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/arrow_3"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_margin="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_arrow_down"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_settings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="0dp"
+                        android:visibility="gone"
+                        android:overScrollMode="never"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

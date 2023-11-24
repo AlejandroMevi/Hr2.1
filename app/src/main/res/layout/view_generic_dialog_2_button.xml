@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:minWidth="100dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_dialog"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        style="@style/DialogTitleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUPER TITULO" />
+
+    <TextView
+        android:id="@+id/dialogMessage"
+        style="@style/DialogMessageStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Visca barca Visca cataluña viscar Leo Messi D10S " />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dialogNegativeButton"
+            style="@style/DialogNegativeButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            android:text="@string/rpcaCancel"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/dialogPositiveButton"
+            style="@style/DialogLeftBorderOkButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            android:text="@string/dialog_positive"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+
+</LinearLayout>

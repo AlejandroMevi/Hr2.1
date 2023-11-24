@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_normal"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        app:indicatorColor="@color/principal"
+        app:layout_constraintBottom_toTopOf="@+id/searchTextField"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/searchTextField"
+        style="@style/InputLayoutRHD"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="@dimen/margin_small"
+        app:endIconDrawable="@drawable/ic_search"
+        app:endIconMode="custom"
+        app:endIconTint="@color/principal"
+        app:hintEnabled="false"
+        app:layout_constraintTop_toBottomOf
+            ="@+id/progressIn">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/buscar_empleado"
+            android:inputType="textFilter" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/miLista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/searchTextField"
+        tools:listitem="@layout/list_item_employee_reports" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

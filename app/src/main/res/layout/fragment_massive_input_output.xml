@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".ui.home.ui.fragments.timeManagement.massiveInputPutput.ui.MassiveInputOutputFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/selectbg"
+        android:animateLayoutChanges="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/margin_large"
+            android:paddingTop="@dimen/margin_large"
+            android:text="FEHA DE BUSQUEDA"
+            android:fontFamily="@font/robotoflex"
+            android:textColor="@color/numEmployee"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDate"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30 / Noviembre / 2023"
+            android:layout_marginStart="@dimen/margin_small"
+            android:textColor="@color/title_toolbar_custom"
+            android:textStyle="bold"
+            app:iconPadding="@dimen/margin_normal"
+            app:icon="@drawable/ic_kardex_anual"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNext"
+            style="?attr/materialIconButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_arrow_right"
+            android:drawableTint="@color/principal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBak"
+            style="?attr/materialIconButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_arrow_left"
+            android:drawableTint="@color/principal"
+            app:layout_constraintEnd_toStartOf="@+id/btnNext"
+            app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clData"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        android:layout_marginHorizontal="@dimen/margin_normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/searchTextField"
+            style="@style/InputLayoutRHD"
+            android:layout_width="match_parent"
+            app:endIconDrawable="@drawable/ic_search"
+            app:endIconMode="custom"
+            app:endIconTint="@color/principal"
+            app:hintEnabled="false"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/buscar_empleado"
+                android:inputType="textFilter" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_input_output"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_normal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/searchTextField"
+            tools:listitem="@layout/list_item_massive_input_outtput" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/tv_data_empty"
+        layout="@layout/item_no_data"
+        android:layout_marginVertical="@dimen/margin_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/floating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_large"
+        android:backgroundTint="@color/principal"
+        android:text="@string/agregar"
+        android:textColor="@color/white"
+        android:tintMode="@color/white"
+        app:icon="@drawable/ic_add"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/header_user"
+            layout="@layout/general_header_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/margin_large"
+            android:layout_marginVertical="@dimen/margin_normal"
+            android:layout_weight="1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="185dp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/texviewNuevaSolicitudAusent"
+                    style="@style/text_title_bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fpNuevaSolicitud"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <include
+                    android:id="@+id/sp_motivos"
+                    layout="@layout/general_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/texviewNuevaSolicitudAusent" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/ll_days"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sp_motivos">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtFecha"
+                        style="@style/Caption_Regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fpFecha" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/FechaInicio"
+                        style="@style/Caption_Regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        tools:text="31/01/2023" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtAl"
+                        style="@style/Caption_Regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="@string/fpaAl"
+                        android:textAlignment="center" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/FechaFinal"
+                        style="@style/Caption_Regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:gravity="center"
+                        android:text="31/01/2023" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtFactor"
+                    style="@style/Caption_Regular"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/fpaFactor"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_days" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtDias"
+                    style="@style/Caption_Regular"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/faDias"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtFactor" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtDias2"
+                    style="@style/Caption_Regular"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center|start"
+                    android:layout_marginHorizontal="5dp"
+                    app:layout_constraintStart_toEndOf="@+id/txtDias"
+                    app:layout_constraintTop_toBottomOf="@+id/txtFactor"
+                    tools:text="Dia" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <include
+                android:id="@+id/linearDesc"
+                layout="@layout/header_indications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/titlesContainer"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                style="@style/text_title_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/kaEnero"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearDesc" />
+
+            <com.kizitonwose.calendar.view.CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                app:cv_dayViewResource="@layout/calendar_day_layout"
+                app:cv_monthHeaderResource="@layout/calendar_day_titles_container"
+                app:cv_orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titlesContainer" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.13" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include
+            android:id="@+id/save"
+            layout="@layout/general_button_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_large"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.core.widget.NestedScrollView>

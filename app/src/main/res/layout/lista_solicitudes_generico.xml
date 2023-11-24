@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
+    style="@style/Widget.Material3.CardView.Filled"
+    android:backgroundTint="?attr/colorSurface"
+    app:cardCornerRadius="0dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="75"
+            android:orientation="vertical"
+            android:layout_margin="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/concepto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/title_concepto"
+                    style="@style/Body2_bold"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/fpConcepto"
+                    android:textStyle="normal" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_concepto"
+                    style="@style/Caption_Regular"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/fpConcepto"
+                    android:textStyle="normal" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/concepto_permiso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/title_concepto_permiso"
+                    style="@style/Body2_bold"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/fpConcepto"
+                    android:textStyle="normal" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_concepto_permiso"
+                    style="@style/Caption_Regular"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/concepto_permiso"
+                    android:textStyle="normal" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/motivo_descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/title_motivo_descripcion"
+                    style="@style/Body2_bold"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/motivo_ausentismo"
+                    android:textStyle="normal" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_motivo_descripcion"
+                    style="@style/Caption_Regular"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/motivo_ausentismo"
+                    android:textStyle="normal" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/motivo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/title_motivo"
+                    style="@style/Body2_bold"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/motivo_ausentismo"
+                    android:textStyle="normal" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_motivo"
+                    style="@style/Caption_Regular"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/motivo_ausentismo"
+                    android:textStyle="normal" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/fecha_permiso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/title_fecha_permiso"
+                    style="@style/Body2_bold"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/fpFecha"
+                    android:textStyle="normal" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_fecha_permiso"
+                    style="@style/Caption_Regular"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/fecha_permiso"
+                    android:textStyle="normal" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/fecha_inicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/title_fecha_inicio"
+                    style="@style/Body2_bold"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/faFechaInicial"
+                    android:textStyle="normal" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_fecha_inicio"
+                    style="@style/Caption_Regular"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/label_fecha_inicio"
+                    android:textStyle="normal" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/horas_inicial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/title_hora_inicial"
+                    style="@style/Body2_bold"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/hora_inicial"
+                    android:textStyle="normal" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_hora_inicial"
+                    style="@style/Caption_Regular"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/hora_inicial"
+                    android:textStyle="normal" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/hora_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/title_hora_final"
+                    style="@style/Body2_bold"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/hora_final"
+                    android:textStyle="normal" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_hora_final"
+                    style="@style/Caption_Regular"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/hora_final"
+                    android:textStyle="normal" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/minutos_permiso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/title_minutos_permiso"
+                    style="@style/Body2_bold"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/minutos_permiso"
+                    android:textStyle="normal" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_minutos_permiso"
+                    style="@style/Caption_Regular"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/minutos_permiso"
+                    android:textStyle="normal" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/horas_permiso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/title_horas_permiso"
+                    style="@style/Body2_bold"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/horas_permiso"
+                    android:textStyle="normal" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_horas_permiso"
+                    style="@style/Caption_Regular"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/horas_permiso"
+                    android:textStyle="normal" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/dias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/title_dias"
+                    style="@style/Body2_bold"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/faDias"
+                    android:textStyle="normal" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_dias"
+                    style="@style/Caption_Regular"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/faDias"
+                    android:textStyle="normal" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/estatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/title_estatus"
+                    style="@style/Body2_bold"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/estatus"
+                    android:textStyle="normal" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_estatus"
+                    style="@style/Caption_Regular"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/estatus"
+                    android:textStyle="normal" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/num_emp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/title_num_emp"
+                    style="@style/Body2_bold"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/numero_empleado"
+                    android:textStyle="normal" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_num_emp"
+                    style="@style/Caption_Regular"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/numero_empleado"
+                    android:textStyle="normal" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/observaciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/title_observaciones"
+                    style="@style/Body2_bold"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/fpObservaciones"
+                    android:textStyle="normal" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_observaciones"
+                    style="@style/Caption_Regular"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/fpObservaciones"
+                    android:textStyle="normal" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

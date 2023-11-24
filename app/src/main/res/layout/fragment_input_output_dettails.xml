@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/header_user"
+            layout="@layout/general_header_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/margin_large"
+            android:layout_marginVertical="@dimen/margin_normal">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView2"
+                style="@style/text_title_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/edit"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_icon1"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:src="@drawable/ic_circle"
+                android:layout_marginTop="@dimen/margin_normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialTextView2" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_section"
+                style="@style/Caption_Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_icon1"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toEndOf="@+id/iv_icon1"
+                app:layout_constraintTop_toTopOf="@+id/iv_icon1"
+                android:text="@string/seccion" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/section"
+                style="@style/Caption_Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toEndOf="@+id/iv_icon1"
+                app:layout_constraintTop_toBottomOf="@+id/tv_section"
+                tools:text="@string/description" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_icon2"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:src="@drawable/ic_circle"
+                android:layout_marginTop="@dimen/margin_normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/section" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_turn"
+                style="@style/Caption_Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_icon2"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toEndOf="@+id/iv_icon2"
+                app:layout_constraintTop_toTopOf="@+id/iv_icon2"
+                android:text="@string/turno_input" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/turn"
+                style="@style/Caption_Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toEndOf="@+id/iv_icon2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_turn"
+                tools:text="@string/description" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_icon3"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:src="@drawable/ic_circle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/turn" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_concept"
+                style="@style/Caption_Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_icon3"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toEndOf="@+id/iv_icon3"
+                app:layout_constraintTop_toTopOf="@+id/iv_icon3"
+                android:text="@string/concepto_input" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/concept"
+                style="@style/Caption_Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toEndOf="@+id/iv_icon3"
+                app:layout_constraintTop_toBottomOf="@+id/tv_concept"
+                tools:text="@string/description" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_icon4"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:src="@drawable/ic_circle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/concept" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_category"
+                style="@style/Caption_Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_icon4"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toEndOf="@+id/iv_icon4"
+                app:layout_constraintTop_toTopOf="@+id/iv_icon4"
+                android:text="@string/categoria_input" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/category"
+                style="@style/Caption_Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toEndOf="@+id/iv_icon4"
+                app:layout_constraintTop_toBottomOf="@+id/tv_category"
+                tools:text="@string/description" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_icon5"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:src="@drawable/ic_circle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/category" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_departament"
+                style="@style/Caption_Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_icon5"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toEndOf="@+id/iv_icon5"
+                app:layout_constraintTop_toTopOf="@+id/iv_icon5"
+                android:text="@string/departamento_input" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/departament"
+                style="@style/Caption_Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toEndOf="@+id/iv_icon5"
+                app:layout_constraintTop_toBottomOf="@+id/tv_departament"
+                tools:text="@string/description" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_icon6"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:src="@drawable/ic_circle"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toTopOf="@+id/iv_icon1" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_vt1"
+                style="@style/Caption_Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/vt1"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_icon6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_icon6"
+                app:layout_constraintTop_toTopOf="@+id/iv_icon6" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/vt1"
+                style="@style/Caption_Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_icon6"
+                app:layout_constraintTop_toBottomOf="@+id/tv_vt1"
+                tools:text="@string/description" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_icon7"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:src="@drawable/ic_circle"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toTopOf="@+id/iv_icon2" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_vt2"
+                style="@style/Caption_Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/vt2"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_icon7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_icon7"
+                app:layout_constraintTop_toTopOf="@+id/iv_icon7" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/vt2"
+                style="@style/Caption_Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_icon7"
+                app:layout_constraintTop_toBottomOf="@+id/tv_vt2"
+                tools:text="@string/description" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_icon8"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:src="@drawable/ic_circle"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toTopOf="@+id/iv_icon3" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_vt3"
+                style="@style/Caption_Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/vt3"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_icon8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_icon8"
+                app:layout_constraintTop_toTopOf="@+id/iv_icon8" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/vt3"
+                style="@style/Caption_Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_icon8"
+                app:layout_constraintTop_toBottomOf="@+id/tv_vt3"
+                tools:text="@string/description" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_icon9"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:src="@drawable/ic_circle"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toTopOf="@+id/iv_icon4" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_vt4"
+                style="@style/Caption_Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/vt4"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_icon9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_icon9"
+                app:layout_constraintTop_toTopOf="@+id/iv_icon9" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/vt4"
+                style="@style/Caption_Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_icon9"
+                app:layout_constraintTop_toBottomOf="@+id/tv_vt4"
+                tools:text="@string/description" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_icon10"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:src="@drawable/ic_circle"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toTopOf="@+id/iv_icon5" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_cause"
+                style="@style/Caption_Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/motivo_input"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_icon10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_icon10"
+                app:layout_constraintTop_toTopOf="@+id/iv_icon10" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/cause"
+                style="@style/Caption_Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_icon10"
+                app:layout_constraintTop_toBottomOf="@+id/tv_cause"
+                tools:text="@string/description" />
+
+            <include
+                android:id="@+id/et_date"
+                layout="@layout/general_edit_text_date_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cause" />
+
+
+            <include
+                android:id="@+id/et_input"
+                layout="@layout/general_edit_text_date_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_normal"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_date" />
+
+            <include
+                android:id="@+id/et_output"
+                layout="@layout/general_edit_text_date_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toTopOf="@+id/et_input" />
+
+            <include
+                android:id="@+id/sp_station"
+                layout="@layout/general_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                app:layout_constraintTop_toBottomOf="@+id/et_input" />
+
+            <include
+                android:id="@+id/sp_status"
+                layout="@layout/general_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginBottom="@dimen/margin_normal"
+                app:layout_constraintBottom_toTopOf="@+id/save"
+                app:layout_constraintTop_toBottomOf="@+id/sp_station"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <include
+                android:id="@+id/save"
+                layout="@layout/general_button_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.Material3.CardView.Filled"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="?attr/colorSurface"
+    app:cardCornerRadius="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/listImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/user_icon_big"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayoutCompat4"
+            app:layout_constraintStart_toEndOf="@+id/listImage"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/listNumEmployee"
+                style="@style/Caption_Regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textColor="@color/numEmployee"
+                android:textSize="11sp"
+                tools:text="1234567890" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/listName"
+                style="@style/Body2_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textColor="@color/puesto"
+                android:textFontWeight="600"
+                tools:text="title"
+                tools:ignore="UnusedAttribute" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/listPuesto"
+                style="@style/Caption_Regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textColor="@color/puesto"
+                android:textFontWeight="400"
+                android:textSize="12sp"
+                tools:text="subtitle"
+                tools:ignore="UnusedAttribute" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtPosibleFalta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_normal"
+                android:background="#FBF4C8"
+                android:fontFamily="@font/robotoflex"
+                android:gravity="center|top"
+                android:letterSpacing="0.03"
+                android:lineHeight="16sp"
+                android:paddingHorizontal="4dp"
+                android:paddingBottom="4dp"
+                android:text="@string/menu_posible_falta"
+                android:textColor="#C2933E"
+                android:textSize="12sp"
+                android:visibility="gone"
+                tools:ignore="UnusedAttribute" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/permisoHrs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/shape_inasistencia_permiso"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtPermisoHrs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginVertical="2dp"
+                    android:background="#FAEAF2"
+                    android:fontFamily="@font/robotoflex"
+                    android:gravity="center|top"
+                    android:letterSpacing="0.03"
+                    android:lineHeight="16sp"
+                    android:paddingHorizontal="4dp"
+                    android:paddingBottom="4dp"
+                    android:text="@string/permiso_horas"
+                    android:textColor="#BD4A83"
+                    android:textSize="12sp"
+                    android:visibility="visible"
+                    tools:ignore="UnusedAttribute" />
+
+                <TextView
+                    android:id="@+id/txtHrs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginVertical="2dp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/robotoflex"
+                    android:gravity="center|top"
+                    android:letterSpacing="0.03"
+                    android:lineHeight="16sp"
+                    android:paddingHorizontal="4dp"
+                    android:paddingBottom="4dp"
+                    android:text="@string/hrs"
+                    android:textColor="#BD4A83"
+                    android:textSize="12sp"
+                    android:visibility="visible"
+                    tools:ignore="UnusedAttribute" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <TextView
+                android:id="@+id/txtAusentismos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_normal"
+                android:background="#DAF8FF"
+                android:fontFamily="@font/robotoflex"
+                android:gravity="center|top"
+                android:letterSpacing="0.03"
+                android:paddingHorizontal="4dp"
+                android:paddingBottom="4dp"
+                android:text="@string/kmAusentismos"
+                android:textColor="#11ABD1"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txtIncapacidades"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_normal"
+                android:background="#E8F4FD"
+                android:fontFamily="@font/robotoflex"
+                android:gravity="center|top"
+                android:letterSpacing="0.03"
+                android:paddingHorizontal="4dp"
+                android:paddingBottom="4dp"
+                android:text="@string/incapacidad"
+                android:textColor="#1983D4"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txtVacaciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_normal"
+                android:background="#E4FAF2"
+                android:fontFamily="@font/robotoflex"
+                android:gravity="center|top"
+                android:letterSpacing="0.03"
+                android:paddingHorizontal="4dp"
+                android:paddingBottom="4dp"
+                android:text="@string/menu_vacaciones"
+                android:textColor="#51B594"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

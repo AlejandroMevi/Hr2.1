@@ -1,0 +1,4 @@
+# path del archivo de generado por google console
+json_key_file("C:/Users/egutierrez/Documents/rhd/fastlane/json_key.json")
+# nombre del paquete de la app
+package_name("com.venturessoft.human.humanrhdapp")

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
+    style="@style/Widget.Material3.CardView.Filled"
+    android:backgroundTint="?attr/colorSurface"
+    app:cardCornerRadius="0dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title_grupo"
+            style="@style/Body2_bold"
+            android:layout_margin="@dimen/margin_normal"
+            android:layout_width="wrap_content"
+            android:text="@string/grupo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title_secuencia"
+            style="@style/Body2_bold"
+            android:layout_width="wrap_content"
+            android:text="@string/secuencia"
+            android:layout_marginStart="@dimen/margin_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_grupo" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title_fechaInicio"
+            style="@style/Body2_bold"
+            android:layout_width="wrap_content"
+            android:text="@string/fecha_inicio"
+            android:layout_marginStart="@dimen/margin_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_secuencia" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title_FechaTermino"
+            style="@style/Body2_bold"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:text="@string/fecha_termino"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fechaInicio" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title_diasTomados"
+            style="@style/Body2_bold"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:text="@string/dias_tomados"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_FechaTermino" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="title_diasTomados,title_secuencia,title_FechaTermino,title_grupo,title_fechaInicio" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_grupo"
+            style="@style/Body2_bold"
+            android:layout_width="0dp"
+            android:layout_margin="@dimen/margin_normal"
+            android:text="Grupo"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_secuencia"
+            style="@style/Body2_bold"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:text="Secuencia"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="@+id/title_secuencia" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_fechaInicio"
+            style="@style/Body2_bold"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:text="Fecha Inicio"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="@+id/title_fechaInicio" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_FechaTermino"
+            style="@style/Body2_bold"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:text="Fecha Termino"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="@+id/title_FechaTermino" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_diasTomados"
+            style="@style/Body2_bold"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:text="Dias Tomados"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="@+id/title_diasTomados" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="1" />
+
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_diasTomados" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

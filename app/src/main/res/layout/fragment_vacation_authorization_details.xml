@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.home.ui.fragments.controlDeAusentismos.autorizacionVacaciones.ui.VacationAuthorizationDetailsFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/header_user"
+            layout="@layout/general_header_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/margin_large"
+            android:layout_marginVertical="@dimen/margin_normal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/llDateStart"
+                style="@style/Caption_Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fecha_inicio"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/llDateEnd"
+                style="@style/Caption_Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fecha_termino"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDateStart" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/llPrepaid"
+                style="@style/Caption_Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aplica_pago_anticipado"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDateEnd" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/llSequencePayment"
+                style="@style/Caption_Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/solicita_pago_de_secuencia"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPrepaid" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/llDays"
+                style="@style/Caption_Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/faDias"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSequencePayment" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="end"
+                app:constraint_referenced_ids="llDateStart,llDateEnd,llPrepaid,llSequencePayment,llDays" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvDateStart"
+                style="@style/Caption_Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/barrier"
+                app:layout_constraintTop_toTopOf="@+id/llDateStart"
+                tools:text="01/01/2023" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvDateEnd"
+                style="@style/Caption_Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/barrier"
+                app:layout_constraintTop_toTopOf="@+id/llDateEnd"
+                tools:text="02/01/2023" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvPrepaid"
+                style="@style/Caption_Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/barrier"
+                app:layout_constraintTop_toTopOf="@+id/llPrepaid"
+                tools:text="No" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSequencePayment"
+                style="@style/Caption_Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/barrier"
+                app:layout_constraintTop_toTopOf="@+id/llSequencePayment"
+                tools:text="No" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvDays"
+                style="@style/Caption_Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/barrier"
+                app:layout_constraintTop_toTopOf="@+id/llDays"
+                tools:text="7" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/llProgrammedSequences"
+                style="@style/text_title_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:text="@string/secuencias_programadas"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDays" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/llHeader1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                app:layout_constraintTop_toBottomOf="@+id/llProgrammedSequences"
+                style="@style/Widget.Material3.CardView.Outlined">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_normal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="@dimen/margin_normal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/materialTextView9"
+                            style="@style/Caption_Regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginBottom="2.5dp"
+                            android:gravity="center"
+                            android:text="@string/label_fecha_inicio"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/materialDivider11"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:id="@+id/materialDivider11"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2.5dp"
+                            app:layout_constraintBottom_toTopOf="@+id/tvDateStart2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvDateStart2"
+                            style="@style/Caption_Regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            tools:text="01/01/2023" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="@dimen/margin_normal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/materialTextView10"
+                            style="@style/Caption_Regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:gravity="center"
+                            android:text="@string/label_fecha_fin"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="2.5dp"
+                            app:layout_constraintBottom_toTopOf="@+id/materialDivider22"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:id="@+id/materialDivider22"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2.5dp"
+                            app:layout_constraintBottom_toTopOf="@+id/tvDateEnd2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvDateEnd2"
+                            style="@style/Caption_Regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            tools:text="02/01/2023" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="@dimen/margin_normal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/materialTextView11"
+                            style="@style/Caption_Regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/label_dias"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="2.5dp"
+                            app:layout_constraintBottom_toTopOf="@+id/materialDivider33"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:id="@+id/materialDivider33"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2.5dp"
+                            app:layout_constraintBottom_toTopOf="@+id/tvDays2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvDays2"
+                            style="@style/Caption_Regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            tools:text="1.0" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/materialTextView12"
+                            style="@style/Caption_Regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:gravity="center"
+                            android:text="@string/ATAnio"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="2.5dp"
+                            app:layout_constraintBottom_toTopOf="@+id/materialDivider44"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:id="@+id/materialDivider44"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2.5dp"
+                            app:layout_constraintBottom_toTopOf="@+id/tvYear2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvYear2"
+                            style="@style/Caption_Regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            tools:text="2023" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/llVacationBalance"
+                style="@style/text_title_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:text="@string/saldo_de_vacaciones"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llHeader1" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/llHeader2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                app:layout_constraintTop_toBottomOf="@+id/llVacationBalance"
+                style="@style/Widget.Material3.CardView.Outlined">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_normal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/margin_normal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/materialTextView"
+                            style="@style/Caption_Regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginBottom="2.5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/period"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/materialDivider1"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:id="@+id/materialDivider1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2.5dp"
+                            app:layout_constraintBottom_toTopOf="@+id/tvPeriod"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvPeriod"
+                            style="@style/Caption_Regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            tools:text="2023" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/margin_normal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/Caption_Regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginBottom="2.5dp"
+                            android:gravity="center"
+                            android:text="@string/faDias"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/materialDivider2"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:id="@+id/materialDivider2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2.5dp"
+                            app:layout_constraintBottom_toTopOf="@+id/tvDays3"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvDays3"
+                            style="@style/Caption_Regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            tools:text="3.0" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="@dimen/margin_normal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/materialTextView3"
+                            style="@style/Caption_Regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2.5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/dias_adicionales"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/materialDivider3"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:id="@+id/materialDivider3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2.5dp"
+                            app:layout_constraintBottom_toTopOf="@+id/tvAdditionalDays"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvAdditionalDays"
+                            style="@style/Caption_Regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            tools:text="0.0" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/materialTextView8"
+                            style="@style/Caption_Regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_marginBottom="2.5dp"
+                            android:text="@string/fecha_de_vencimiento"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/materialDivider4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:id="@+id/materialDivider4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2.5dp"
+                            app:layout_constraintBottom_toTopOf="@+id/tvDueDate"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvDueDate"
+                            style="@style/Caption_Regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            tools:text="02/01/2023" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAcept"
+                style="@style/ButtonRHD"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="@string/autorizar"
+                app:layout_constraintBottom_toTopOf="@+id/btnCancel" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancel"
+                style="@style/ButtonRHD"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:text="@string/rechazar"
+                android:textColor="@color/principal"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.core.widget.NestedScrollView>

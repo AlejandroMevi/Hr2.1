@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.ui.fragments.controlDeAusentismos.reportesEstacionesLibres.FilterStationFreeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            style="@style/ToolbarRHD"
+            android:layout_width="match_parent"
+            android:animateLayoutChanges="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@string/filtros"
+            app:navigationIcon="@drawable/close"
+            app:navigationIconTint="@color/principal"
+            app:titleTextColor="@color/title_toolbar_custom" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title"
+            style="@style/SubHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16"
+            android:text="@string/selecciona_filtros"
+            android:textColor="@color/selecttxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <include
+            android:id="@+id/spProcess"
+            layout="@layout/general_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlNumSec"
+            style="@style/InputLayoutRHD"
+            android:layout_margin="@dimen/margin_16"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/spProcess">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etnumSec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Número de secuencias (opcional)"
+                android:inputType="textFilter" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/materialTextView14"
+            style="@style/SubHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16"
+            android:text="Tipo de registro"
+            android:textColor="@color/selecttxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tlNumSec" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView5"
+            style="@style/Widget.Material3.CardView.Outlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16"
+            app:layout_constraintBottom_toTopOf="@+id/save"
+            app:layout_constraintTop_toBottomOf="@+id/materialTextView14"
+            app:strokeColor="@color/divider_color"
+            tools:layout_editor_absoluteX="16dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="@dimen/margin_normal">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cball"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_16"
+                        android:text="Todos los registros"
+                        app:checkedState="indeterminate" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/principal_light"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_normal">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cb1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Entrada/salida completa y activa" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cb2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Entrada/salida completa e inactiva" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cb3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Entrada/salida incompleta y activa" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cb4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Entrada/salida incompleta e inactiva" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cb5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Registro fuera de turno" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cb6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Registro de comedor" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cb7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Registro de posible falta" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <include
+            android:id="@+id/save"
+            layout="@layout/general_button_save"
+            android:layout_margin="@dimen/margin_16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

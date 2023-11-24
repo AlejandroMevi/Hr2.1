@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <!--HOME-->
+
+    <fragment
+        android:id="@+id/succesFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.controlDeAusentismos.SuccesFragment"
+        tools:layout="@layout/fragment_succes" />
+
+    <action
+        android:id="@+id/to_succesFragment"
+        app:destination="@id/succesFragment"
+        app:enterAnim="@anim/anim_enter_left"
+        app:exitAnim="@anim/anim_exit_left"/>
+
+    <!--OPTIONS-->
+
+    <fragment
+        android:id="@+id/listEmployeeFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.listEmployee.ui.ListEmployeeFragment"
+        tools:layout="@layout/fragment_list_employee" />
+
+    <fragment
+        android:id="@+id/alta_vacaciones"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.controlDeAusentismos.altaVacaciones.ui.alta_vacaciones"
+        tools:layout="@layout/fragment_alta_vacaciones" />
+
+    <fragment
+        android:id="@+id/progAnualVacFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.controlDeAusentismos.ProgAnualVacaciones.ui.ProgAnualVacFragment"
+        tools:layout="@layout/fragment_prog_anual_vac" />
+
+    <fragment
+        android:id="@+id/ausentismosFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.controlDeAusentismos.Ausentismos.ui.AusentismosFragment"
+        tools:layout="@layout/fragment_ausentismos2" />
+
+    <fragment
+        android:id="@+id/permisos"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.controlDeAusentismos.permisos.ui.Permisos"
+        tools:layout="@layout/fragment_permisos" />
+
+    <fragment
+        android:id="@+id/kardexAnualFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.controlDeAusentismos.anualKardex.ui.KardexAnualFragment"
+        tools:layout="@layout/fragment_kardex_anual" />
+
+    <fragment
+        android:id="@+id/kardexMensualFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.controlDeAusentismos.KardexMensual.ui.KardexMensualFragment"
+        tools:layout="@layout/fragment_kardex_menual" />
+
+    <fragment
+        android:id="@+id/informacionGeneralFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.timeManagement.generalInformation.ui.GeneralInformationFragment"
+        tools:layout="@layout/fragment_general_information" />
+
+    <fragment
+        android:id="@+id/negociacionHorariosFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.timeManagement.scheduleNegotiation.ui.ScheduleNegotiationFragment"
+        tools:layout="@layout/fragment_negociacion_horarios" />
+
+    <fragment
+        android:id="@+id/generalInformationDetailsFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.timeManagement.generalInformation.ui.GeneralInformationDetailsFragment"
+        tools:layout="@layout/fragment_time_managment" />
+
+    <fragment
+        android:id="@+id/entradasSalidasFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.timeManagement.inputOutput.ui.EntradasSalidasFragment"
+        tools:layout="@layout/fragment_entradas_salidas2" />
+
+    <fragment
+        android:id="@+id/entradasSalidasMasivasFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.timeManagement.massiveInputPutput.ui.MassiveInputOutputFragment"
+        tools:layout="@layout/fragment_massive_input_output" />
+
+    <fragment
+        android:id="@+id/inputOutputDettailsFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.timeManagement.inputOutput.ui.InputOutputDettailsFragment"
+        tools:layout="@layout/fragment_input_output_dettails" />
+
+    <fragment
+        android:id="@+id/entradasSalidasMasivasDetalleFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.timeManagement.massiveInputPutput.ui.MassiveInputOutputDetailsFragment"
+        tools:layout="@layout/fragment_massive_input_output_details" />
+
+    <fragment
+        android:id="@+id/preautorizacionTiemposFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.timeManagement.preauthorizationTimes.ui.PreautorizacionTiemposFragment"
+        tools:layout="@layout/fragment_preautorizacion_tiempos" />
+
+    <fragment
+        android:id="@+id/preauthorizationDetailsFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.timeManagement.preauthorizationTimes.ui.PreauthorizationDetailsFragment"
+        android:layout="@layout/fragment_preauthorization_details" />
+
+    <action
+        android:id="@+id/to_listEmployeeFragment"
+        app:destination="@id/listEmployeeFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right"
+        app:popUpTo="@id/listEmployeeFragment"
+        app:popUpToInclusive="true"/>
+
+    <action
+        android:id="@+id/to_alta_vacaciones"
+        app:destination="@id/alta_vacaciones"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right"
+        app:popUpTo="@id/alta_vacaciones"
+        app:popUpToInclusive="true"/>
+
+    <action
+        android:id="@+id/to_progAnualVacFragment"
+        app:destination="@id/progAnualVacFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right"
+        app:popUpTo="@id/progAnualVacFragment"
+        app:popUpToInclusive="true"/>
+
+    <action
+        android:id="@+id/to_ausentismosFragment"
+        app:destination="@id/ausentismosFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right"
+        app:popUpTo="@id/ausentismosFragment"
+        app:popUpToInclusive="true"/>
+
+    <action
+        android:id="@+id/to_permisos"
+        app:destination="@id/permisos"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right"
+        app:popUpTo="@id/permisos"
+        app:popUpToInclusive="true"/>
+
+    <action
+        android:id="@+id/to_kardexAnualFragment"
+        app:destination="@id/kardexAnualFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right" />
+
+    <action
+        android:id="@+id/to_kardexMensualFragment"
+        app:destination="@id/kardexMensualFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right" />
+
+    <action
+        android:id="@+id/to_informacionGeneralFragment"
+        app:destination="@id/informacionGeneralFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right"
+        app:popUpTo="@id/informacionGeneralFragment"
+        app:popUpToInclusive="true"/>
+
+    <action
+        android:id="@+id/to_negociacionHorariosFragment"
+        app:destination="@id/negociacionHorariosFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right"
+        app:popUpTo="@id/negociacionHorariosFragment"
+        app:popUpToInclusive="true"/>
+
+    <action
+        android:id="@+id/to_generalInformationDetailsFragment"
+        app:destination="@id/generalInformationDetailsFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right" />
+
+    <action
+        android:id="@+id/to_entradasSalidasFragment"
+        app:destination="@id/entradasSalidasFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right"
+        app:popUpTo="@id/entradasSalidasFragment"
+        app:popUpToInclusive="true"/>
+
+    <action
+        android:id="@+id/to_entradasSalidasMasivasFragment"
+        app:destination="@id/entradasSalidasMasivasFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right"
+        app:popUpTo="@id/entradasSalidasMasivasFragment"
+        app:popUpToInclusive="true"/>
+
+    <action
+        android:id="@+id/to_inputOutputDettailsFragment"
+        app:destination="@id/inputOutputDettailsFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right"
+        app:popUpTo="@id/inputOutputDettailsFragment"
+        app:popUpToInclusive="true"/>
+
+    <action
+        android:id="@+id/to_entradasSalidasMasivasDetalleFragment"
+        app:destination="@id/entradasSalidasMasivasDetalleFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right" />
+
+    <action
+        android:id="@+id/to_preautorizacionTiemposFragment"
+        app:destination="@id/preautorizacionTiemposFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right"
+        app:popUpTo="@id/preautorizacionTiemposFragment"
+        app:popUpToInclusive="true"
+       />
+
+    <action
+        android:id="@+id/to_preauthorizationDetailsFragment"
+        app:destination="@id/preauthorizationDetailsFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right"
+        app:popUpTo="@id/preauthorizationDetailsFragment"
+        app:popUpToInclusive="true"/>
+
+    <!--ABOUT-->
+
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.about.AboutUsFragment"
+        tools:layout="@layout/fragment_about_us" />
+
+    <action
+        android:id="@+id/to_aboutUsFragment"
+        app:destination="@id/aboutUsFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right" />
+
+    <!--Reportes Control De Ausentismos-->
+
+    <fragment
+        android:id="@+id/menuReportesControlDeAusentismosFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.controlDeAusentismos.reportes.MenuReportesControlDeAusentismosFragment"
+        tools:layout="@layout/fragment_menu_reportes_control_de_ausentismos" />
+
+    <fragment
+        android:id="@+id/reportAbsenteeismControlFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.controlDeAusentismos.reportes.reportHolidayControlAusentismo.ui.ReportAbsenteeismControlFragment"
+        tools:layout="@layout/fragment_report_absenteeism_control" />
+
+    <fragment
+        android:id="@+id/p_d_f_VIewerFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.controlDeAusentismos.reportes.reportHolidayControlAusentismo.ui.PDFVIewerFragment"
+        tools:layout="@layout/fragment_p_d_f_viewer" />
+
+    <action
+        android:id="@+id/to_menuReportesControlDeAusentismosFragment"
+        app:destination="@id/menuReportesControlDeAusentismosFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right" />
+
+    <action
+        android:id="@+id/to_reportAbsenteeismControlFragment"
+        app:destination="@id/reportAbsenteeismControlFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right" />
+
+    <action
+        android:id="@+id/to_p_d_f_VIewerFragment"
+        app:destination="@id/p_d_f_VIewerFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right" />
+
+
+    <!-- Reportes-->
+
+    <fragment
+        android:id="@+id/reportesFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.timeManagement.reports.ReportesFragment"
+        tools:layout="@layout/fragment_reportes" />
+
+    <action
+        android:id="@+id/to_reportesFragment"
+        app:destination="@id/reportesFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right" />
+
+    <!-- Reportes - Administracion de tiempos-->
+
+    <fragment
+        android:id="@+id/reporteAdministracionTIemposFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.timeManagement.reports.reportesAT.ui.ReporteAdministracionTIemposFragment"
+        tools:layout="@layout/fragment_reporte_administracion_t_iempos" />
+
+    <action
+        android:id="@+id/to_reporteAdministracionTIemposFragment"
+        app:destination="@id/reporteAdministracionTIemposFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right" />
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.main.ui.welcome.WelcomeFragment"
+        tools:layout="@layout/fragment_main" />
+
+    <action
+        android:id="@+id/to_mainFragment"
+        app:destination="@id/mainFragment"
+        app:enterAnim="@anim/anim_enter_left"
+        app:exitAnim="@anim/anim_exit_right"
+        app:popEnterAnim="@anim/anim_enter_right"
+        app:popExitAnim="@anim/anim_exit_left"
+        app:popUpTo="@id/mainFragment"
+        app:popUpToInclusive="true"/>
+
+    <fragment
+        android:id="@+id/scheduleNegotiationDetailsFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.timeManagement.scheduleNegotiation.ui.ScheduleNegotiationDetailsFragment"
+        tools:layout="@layout/fragment_schedule_negotiation_details" />
+
+    <action
+        android:id="@+id/to_scheduleNegotiationDetailsFragment"
+        app:destination="@id/scheduleNegotiationDetailsFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right" />
+
+    <fragment
+        android:id="@+id/listaSolicitudesFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.controlDeAusentismos.ProgAnualVacaciones.ui.ListaSolicitudesFragment"
+        tools:layout="@layout/fragment_lista_solicitudes" />
+
+    <action
+        android:id="@+id/to_listaSolicitudesFragment"
+        app:destination="@id/listaSolicitudesFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right" />
+
+    <fragment
+        android:id="@+id/listaSolicitudesPeFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.controlDeAusentismos.permisos.ui.ListaSolicitudesPeFragment"
+        tools:layout="@layout/fragment_lista_solicitudes_pe" />
+
+    <action
+        android:id="@+id/to_listaSolicitudesPeFragment"
+        app:destination="@id/listaSolicitudesPeFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right"
+        app:popUpTo="@id/listaSolicitudesPeFragment"
+        app:popUpToInclusive="true"/>
+
+    <fragment
+        android:id="@+id/generalStationsFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.timeManagement.generalInformation.ui.GeneralStationsFragment"
+        tools:layout="@layout/fragment_general_stations" />
+
+    <action
+        android:id="@+id/to_generalStationsFragment"
+        app:destination="@id/generalStationsFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right" />
+
+    <fragment
+        android:id="@+id/vacationAuthorizationFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.controlDeAusentismos.autorizacionVacaciones.ui.VacationAuthorizationFragment"
+        tools:layout="@layout/fragment_vacation_authorization" />
+
+    <fragment
+        android:id="@+id/vacationAuthorizationDetailsFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.controlDeAusentismos.autorizacionVacaciones.ui.VacationAuthorizationDetailsFragment"
+        tools:layout="@layout/fragment_vacation_authorization_details" />
+
+    <action
+        android:id="@+id/to_vacationAuthorizationFragment"
+        app:destination="@id/vacationAuthorizationFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right"
+        app:popUpTo="@id/vacationAuthorizationFragment"
+        app:popUpToInclusive="true"/>
+
+    <action
+        android:id="@+id/to_vacationAuthorizationDetailsFragment"
+        app:destination="@id/vacationAuthorizationDetailsFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right" />
+
+    <fragment
+        android:id="@+id/reportesEstacionesLibresFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.controlDeAusentismos.reportesEstacionesLibres.ui.ReportesEstacionesLibresFragment"
+        tools:layout="@layout/fragment_reportes_estaciones_libres" />
+
+    <action
+        android:id="@+id/to_reportesEstacionesLibresFragment"
+        app:destination="@id/reportesEstacionesLibresFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right" />
+
+    <fragment
+        android:id="@+id/detallesEstacionesLibresFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.home.ui.fragments.controlDeAusentismos.reportesEstacionesLibres.ui.DetallesEstacionesLibresFragment"
+        tools:layout="@layout/fragment_detalles_estaciones_libres" />
+
+    <action
+        android:id="@+id/to_detallesEstacionesLibresFragment"
+        app:destination="@id/detallesEstacionesLibresFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right" />
+
+    <fragment
+        android:id="@+id/pruebFragment"
+        android:name="com.venturessoft.human.humanrhdapp.ui.PruebFragment"
+        tools:layout="@layout/fragment_prueb" />
+
+    <action
+        android:id="@+id/to_pruebFragment"
+        app:destination="@id/pruebFragment"
+        app:enterAnim="@anim/anim_enter_right"
+        app:exitAnim="@anim/anim_exit_left"
+        app:popEnterAnim="@anim/anim_enter_left"
+        app:popExitAnim="@anim/anim_exit_right"
+        app:popUpTo="@id/pruebFragment"
+        app:popUpToInclusive="true"/>
+</navigation>

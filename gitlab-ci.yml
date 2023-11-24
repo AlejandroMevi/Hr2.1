@@ -1,0 +1,25 @@
+before_script:
+  - export ANDROID_HOME="$HOME/Library/Android/sdk"
+  - export LC_ALL=en_US.UTF-8
+  - export LANG=en_US.UTF-8
+  - bundle install
+stages:
+- build
+- deploy
+build_job:
+  stage: build
+  script:
+    - ./gradlew clean assembleRelease
+  artifacts:
+    paths:
+    - app/build/outputs/
+  only: 
+    - CICDRHD
+deploy:
+  stage: deploy
+  script:
+    - bundle exec fastlane deploy
+  when: manual
+
+
+

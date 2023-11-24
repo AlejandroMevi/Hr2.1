@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.Material3.CardView.Filled"
+    android:backgroundTint="@color/transparent"
+    app:cardCornerRadius="0dp"
+    android:id="@+id/cardviewlista"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/layoutDate"
+            style="@style/Body2_bold"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_fecha"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/layoutBadge"
+            style="@style/Body2_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/labe_gafete"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/layoutCalendar"
+            style="@style/Body2_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_calendario"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/badge" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/layoutRolTurn"
+            style="@style/Body2_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rol_horario"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calendar" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="layoutCalendar,layoutRolTurn,layoutBadge,layoutDate" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/date"
+            style="@style/Body2_bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier2"
+            app:layout_constraintTop_toTopOf="@+id/layoutDate"
+            tools:text="01/01/2023" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/badge"
+            style="@style/Body2_bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier2"
+            app:layout_constraintTop_toTopOf="@+id/layoutBadge"
+            tools:text="2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/calendar"
+            style="@style/Body2_bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:layout_marginStart="@dimen/margin_normal"
+            app:layout_constraintStart_toEndOf="@+id/barrier2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutBadge"
+            tools:text="Administrativo" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/rolturn"
+            style="@style/Body2_bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:layout_marginStart="@dimen/margin_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier2"
+            app:layout_constraintTop_toBottomOf="@+id/calendar"
+            tools:text="2023" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rolturn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

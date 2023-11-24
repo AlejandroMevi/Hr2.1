@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardviewlista"
+    style="@style/Widget.Material3.CardView.Filled"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="?attr/colorSurface"
+    app:cardCornerRadius="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/labelDate"
+            style="@style/Body2_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fecha1"
+            android:layout_margin="@dimen/margin_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/date"
+            style="@style/Body2_bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal"
+            android:text="02/02/2023"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/labelDate"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/labelBy"
+            style="@style/Body2_bold"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="De"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelDate" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/timeIn"
+            style="@style/Body2_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_normal"
+            android:textAppearance="@style/Caption_Regular"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/labelBy"
+            app:layout_constraintTop_toBottomOf="@+id/date"
+            tools:text="9:00" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/labelTo"
+            style="@style/Body2_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_normal"
+            android:text="A"
+            app:layout_constraintStart_toEndOf="@+id/timeIn"
+            app:layout_constraintTop_toTopOf="@+id/timeIn" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/timeOut"
+            style="@style/Body2_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_normal"
+            android:textAppearance="@style/Caption_Regular"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/labelTo"
+            app:layout_constraintTop_toTopOf="@+id/labelTo"
+            tools:text="18:00" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timeOut" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

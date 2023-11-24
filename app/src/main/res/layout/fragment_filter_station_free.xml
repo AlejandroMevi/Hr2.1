@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.ui.fragments.controlDeAusentismos.reportesEstacionesLibres.FilterStationFreeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        style="@style/ToolbarRHD"
+        android:layout_width="match_parent"
+        android:animateLayoutChanges="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/close"
+        app:navigationIconTint="@color/principal"
+        app:titleTextColor="@color/title_toolbar_custom" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
+        style="@style/SubHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:text="@string/selecciona_filtros"
+        android:textColor="@color/selecttxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <CheckBox
+        android:id="@+id/cb_allEmployes"
+        style="@style/SubHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_16"
+        android:layout_marginTop="24dp"
+        android:checked="true"
+        android:paddingHorizontal="@dimen/margin_16"
+        android:text="@string/todos_los_empleados"
+        android:textColor="@color/selecttxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/selectEmployee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/selectbg"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_16"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/cb_allEmployes">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/cgCondiciones"
+            app:chipSpacingVertical="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.chip.Chip
+                style="@style/chFilterEmployee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonEmployee"
+            style="@style/ButtonFilterEmployee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotoflex"
+            android:layout_marginTop="@dimen/margin_16"
+            android:gravity="center_horizontal|top"
+            android:letterSpacing="0.08"
+            android:lineHeight="20sp"
+            android:lineSpacingExtra="-2sp"
+            android:text="@string/empleado_al_filtro"
+            android:textFontWeight="600"
+            android:textSize="16sp"
+            app:icon="@drawable/ic_add"
+            app:iconGravity="textStart"
+            app:iconTint="@color/principal" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/subtitle"
+        style="@style/Caption_semibold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:text="@string/filtrar_por_fecha"
+        android:textColor="@color/selecttxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectEmployee"
+        app:textAllCaps="true" />
+
+    <include
+        android:id="@+id/et_input"
+        layout="@layout/general_edit_text_date_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitle" />
+
+    <include
+        android:id="@+id/et_output"
+        layout="@layout/general_edit_text_date_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="@dimen/margin_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/subtitle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_16"
+        android:paddingVertical="@dimen/margin_16"
+        app:cornerRadius="8dp"
+        android:layout_marginTop="48dp"
+        android:letterSpacing="0.08"
+        android:lineHeight="20sp"
+        android:lineSpacingExtra="-2sp"
+        android:text="@string/aplicar_filtros"
+        android:textFontWeight="600"
+        android:textSize="16sp"
+        app:iconGravity="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_output" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnClearFilters"
+        style="@style/ButtonTextRHD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_16"
+        android:layout_marginTop="24dp"
+        android:letterSpacing="0.08"
+        android:lineHeight="20sp"
+        android:lineSpacingExtra="-2sp"
+        android:text="@string/remover_filtros"
+        android:textFontWeight="600"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFilter" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/menu_home"
+        android:enabled="true"
+        android:id="@+id/home"
+        android:icon="@drawable/ic_baseline_home_24"/>
+    <item android:title="@string/menu_menu"
+        android:enabled="true"
+        android:id="@+id/menu"
+        android:icon="@drawable/ic_menu_24"/>
+</menu>

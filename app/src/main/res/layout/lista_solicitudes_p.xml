@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ListaSolicitudesCardViewRHD"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/title_grupo"
+                style="@style/Body2_bold"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:text="@string/fpConcepto"
+                android:textStyle="normal" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_grupo"
+                style="@style/Caption_Regular"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:text="@string/fpaGrupo"
+                android:textStyle="normal" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/title_secuencia"
+                style="@style/Body2_bold"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:text="@string/fpFecha"
+                android:textStyle="normal" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_secuencia"
+                style="@style/Caption_Regular"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:text="Secuencia"
+                android:textStyle="normal" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/title_fechaInicio"
+                style="@style/Body2_bold"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:text="@string/hora_inicial"
+                android:textStyle="normal" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_fechaInicio"
+                style="@style/Caption_Regular"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:text="Fecha Inicio"
+                android:textStyle="normal" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/title_FechaTermino"
+                style="@style/Body2_bold"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:text="@string/hora_final"
+                android:textStyle="normal" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_FechaTermino"
+                style="@style/Caption_Regular"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:text="Fecha Termino"
+                android:textStyle="normal" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/title_diasTomados"
+                style="@style/Body2_bold"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:text="@string/minutos_retardos"
+                android:textStyle="normal" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_diasTomados"
+                style="@style/Caption_Regular"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:text="Dias Tomados"
+                android:textStyle="normal" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/title_horasPermiso"
+                style="@style/Body2_bold"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:text="@string/horas_permiso"
+                android:textStyle="normal" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_horasPermiso"
+                style="@style/Caption_Regular"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:text="Dias Tomados"
+                android:textStyle="normal" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/title_estatus"
+                style="@style/Body2_bold"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:text="@string/estatus"
+                android:textStyle="normal" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_estatus"
+                style="@style/Caption_Regular"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:text="Dias Tomados"
+                android:textStyle="normal" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</com.google.android.material.card.MaterialCardView>

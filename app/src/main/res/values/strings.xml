@@ -1,0 +1,741 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">HumanRHDapp</string>
+
+    <!--Generales-->
+    <string name="none">Ninguno</string>
+    <string name="selecciona_fecha">Selecciona una fecha</string>
+    <string name="selecciona_hora">Selecciona una hora</string>
+    <string name="total_dep">Total departamento</string>
+    <string name="conceptos">Conceptos</string>
+    <string name="selecciona_concepto">Selecciona un concepto</string>
+    <string name="sin_conceptos">Sin conceptos</string>
+    <string name="supervisor">Supervisor:</string>
+    <string name="seleccionar_supervisor">Selecciona un supervisor</string>
+    <string name="reporte">Reporte</string>
+    <string name="descargas">Descargas</string>
+    <string name="descargar_pdf">Descarga PDF</string>
+    <string name="pdf_descargado">PDF descargado correctamente</string>
+    <string name="error_descargar_PDF">Error al descargar el PDF</string>
+    <string name="almacenamiento_interno">Almacenamiento interno</string>
+    <string name="seleccionar_motivo">Seleccionar un motivo</string>
+    <string name="seleccionar_hora_inicial">Seleccionar una hora inicial</string>
+    <string name="seleccionar_hora_final">Seleccionar una hora final</string>
+    <string name="ingresar_comentario">Favor de ingresar un comentario</string>
+    <string name="sin_info_motivos">Sin informacion de motivos</string>
+    <string name="seleccionar_codid">Seleccionar código de identidad</string>
+    <string name="codid">Codigo de identidad:</string>
+    <string name="empleados_seleccionados">Empleados seleccionados</string>
+    <string name="seleccionar_empleados">Seleccionar empleados</string>
+    <string name="lista_Empleados">Lista de empleados</string>
+    <string name="empleado_seleccionado">Empleado seleccionado</string>
+    <string name="seleccion_anio">Selecciona un año</string>
+    <string name="hay">Hay</string>
+    <string name="empleados_asistencia">de empleados con asistencia</string>
+    <string name="asistencia">Asistencia</string>
+    <string name="button_refresh">Refrescar</string>
+    <string name="todos_anios">Todos los años</string>
+    <string name="empleados">Empleados</string>
+    <string name="grupo">Grupo : </string>
+    <string name="secuencia">Secuencia : </string>
+    <string name="fecha_inicio">Fecha inicio : </string>
+    <string name="fecha_termino">Fecha termino : </string>
+    <string name="dias_tomados">Dias tomados : </string>
+    <string name="autorizar">Autorizar</string>
+    <string name="registro_tiempos_extras">Registro de tiempos extras</string>
+    <string name="negociaciones_horario">Negociaciones de horario</string>
+    <string name="lista_solicitdes">Lista de solicitudes</string>
+    <string name="hora_inicial">Hora inicial:</string>
+    <string name="hora_final">Hora final:</string>
+    <string name="minutos_retardos">Minutos retardo</string>
+    <string name="horas_permiso">Horas permiso:</string>
+    <string name="estatus">Estatus:</string>
+    <string name="lista_de_ausentismos">Lista de ausentismos</string>
+    <string name="lista_de_permisos">Lista de permisos</string>
+    <string name="selecciona_dias">Seleccionar días</string>
+    <string name="dia_seleccionado">Día seleccionado</string>
+    <string name="dias_seleccionados">Días seleccionados</string>
+    <string name="cero_dias_seleccionados">0 días seleccionados</string>
+    <string name="concepto_permiso">Concepto permiso:</string>
+    <string name="fecha_permiso">Fecha permiso:</string>
+    <string name="motivo_descripcion">Motivo descripción</string>
+    <string name="minutos_permiso">Minutos retardo:</string>
+    <string name="numero_empleado">Numero empleado:</string>
+    <string name="motivo_ausentismo">Motivo de ausentismo:</string>
+    <string name="editar_permisos">Editar permiso</string>
+    <string name="alta_permisos">Alta permisos</string>
+    <string name="guardar">Guardar</string>
+    <string name="actualizar_solicitud">Actualizar solicitud</string>
+    <string name="sin_registros">No Hay Registros disponibles</string>
+    <string name="grupos">Grupos:</string>
+    <string name="agregar">Agregar</string>
+    <string name="incapacidad">Incapacidad</string>
+    <string name="sin_registros_ausentismos">No existen registros de Ausentismos</string>
+    <string name="sin_registros_permisos">No existen registros de Permisos</string>
+    <string name="sin_registros_vacaciones">No existen registros de Vacaciones</string>
+    <string name="por_el_momento_ausentismos" tools:ignore="Typos">Por el momento no se cuenta con registros de Ausentismos para este colaborador.</string>
+    <string name="por_el_momento_permisos" tools:ignore="Typos">Por el momento no se cuenta con registros de Permisos para este colaborador.</string>
+    <string name="por_el_momento_vacaciones" tools:ignore="Typos">Por el momento no se cuenta con registros de Vacaciones para este colaborador.</string>
+    <string name="crear_ausentismo">Crear nuevo ausentismo</string>
+    <string name="crear_permisos">Crear nuevo permiso</string>
+    <string name="agregar_vacaciones">Agregar vacaciones</string>
+    <string name="version">Versión:</string>
+    <string name="compilación">Compilación:</string>
+    <string name="copyright">Copyright ©:</string>
+    <string name="venturessoft_corporation">Venturessoft Corporation</string>
+    <string name="advertencia">Advertencia:</string>
+    <string name="about_us_txt" tools:ignore="Typos">Este programa está protegido por las leyes de derechos de autor y otros tratados internacionales. La reproduccion o distribución licita de este programa, o de cualquier parte del mismo, está penada por la ley con severas sanciones civiles y será objeto de todas las acciones judiciales que correspondan.</string>
+    <string name="filtros">Filtros</string>
+    <string name="filtrar">Filtrar</string>
+    <string name="buscar_estacion">Buscar Estacion</string>
+    <string name="acceso">Acceso</string>
+    <string name="control_de_tiempos">Control de tiempos</string>
+    <string name="control_de_tiempos_acceso">Control de tiempos y acceso</string>
+    <string name="human_etime">Human eTime</string>
+    <string name="description">description</string>
+    <string name="turno_input">Turno:</string>
+    <string name="concepto_input">Concepto:</string>
+    <string name="categoria_input">Categoria:</string>
+    <string name="departamento_input">Departamento:</string>
+    <string name="motivo_input">Motivo:</string>
+    <string name="vt1">VT1:</string>
+    <string name="vt2">VT2:</string>
+    <string name="vt3">VT3:</string>
+    <string name="vt4">VT4:</string>
+    <string name="vt5">VT5:</string>
+    <string name="ene">Ene</string>
+    <string name="feb">Feb</string>
+    <string name="mar">Mar</string>
+    <string name="abr">Abr</string>
+    <string name="may">May</string>
+    <string name="jun">Jun</string>
+    <string name="jul">Jul</string>
+    <string name="ago">Ago</string>
+    <string name="sep">Sep</string>
+    <string name="oct">Oct</string>
+    <string name="nov">Nov</string>
+    <string name="dic">Dic</string>
+    <string name="proceso_maestro_reloj">Proceso: Maestro Reloj</string>
+    <string name="nueva">Nueva</string>
+    <string name="estaciones">Estaciones</string>
+    <string name="por_estructura_departamental">Por estructura departamental</string>
+    <string name="aplica_pago_anticipado">Aplica pago anticipado: </string>
+    <string name="solicita_pago_de_secuencia">Solicita pago de secuencia: </string>
+    <string name="secuencias_programadas">Secuencias programadas</string>
+    <string name="saldo_de_vacaciones">Saldo de vacaciones</string>
+    <string name="dias_adicionales">Dias adicionales:</string>
+    <string name="fecha_de_vencimiento">Fecha de vencimiento:</string>
+    <string name="rechazar">Rechazar</string>
+    <string name="no_existen_registros">No existen registros</string>
+    <string name="por_el_momento_no_se_cuenta_con_registros" tools:ignore="Typos">Por el momento no se cuenta con registros para este colaborador.</string>
+    <string name="seccion">Sección:</string>
+    <string name="hora_inicio_fin">Hora inicio/fin:</string>
+    <string name="a_las">a las</string>
+    <string name="detalle_del_reporte">Detalle del reporte</string>
+    <string name="est_libres_estacion">Estacion : </string>
+    <string name="entrada">Entrada</string>
+    <string name="salida">Salida</string>
+    <string name="seleccionar_categoria">Seleccionar una categoria</string>
+    <string name="seleccionar_zona">Seleccionar una zona</string>
+    <string name="seleccionar_departamento">Seleccionar un departamento</string>
+    <string name="registro_estaciones_libres">Registro en estaciones libres</string>
+    <string name="detalle_del_registro">Detalle del registro</string>
+    <string name="selecciona_filtros">Selecciona los filtros que desees aplicar.</string>
+    <string name="todos_los_empleados">Todos los empleados</string>
+    <string name="filtrar_por_fecha">Filtrar por fecha</string>
+    <string name="aplicar_filtros">Aplicar filtros</string>
+    <string name="faFechaFinal">Fecha final:</string>
+    <string name="empleado_al_filtro">Añadir empleado al filtro</string>
+    <string name="empleado_a_la_lista">Añadir empleado a la lista</string>
+    <string name="selecciona_un_empleado">Selecciona un empleado</string>
+    <string name="anadir">Añadir</string>
+    <string name="remover_filtros">Remover filtros aplicados</string>
+    <string name="rol">Rol:</string>
+    <string name="turno">Turno:</string>
+    <string name="categoria">Categoria:</string>
+    <string name="zona">Zona:</string>
+    <string name="marca">Marca</string>
+    <string name="edit_solicitud">Editar Solicitud</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="ausentismo_desc">Ausentismo Desc</string>
+    <string name="permiso_hrs">Permiso Hrs. S/G</string>
+    <string name="permiso_horas">Permiso hrs</string>
+    <string name="porcentaje_de_asistencia">Porcentaje de asistencia</string>
+    <string name="hrs">9:00 → 11:00</string>
+
+    <!--Login Activity -->
+    <string name="a_login_error_email_empty">Favor de ingresar su correo electrónico.</string>
+    <string name="a_login_error_nip_empty">Favor de ingresar su contraseña.</string>
+    <string name="validate_jwt">Tu sesion a finalizado.</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="login_email">Usuario</string>
+    <string name="login_email_hint">Escribe tu nombre de usuario</string>
+    <string name="login_password">Contraseña</string>
+    <string name="login_botton_enter">Acceder</string>
+    <string name="login_text_recover">¿No pudiste acceder a tu cuenta?</string>
+    <string name="login_text_recover_password">Recuperar contraseña</string>
+    <string name="login_human">Human RHD by VenturesSoft® S.A de C.V</string>
+    <string name="list_company_title">Selecciona una empresa</string>
+    <string name="list_company_positive">Seleccionar</string>
+    <string name="list_company_negative">Cancelar</string>
+
+    <!--Forgot Nip Activity -->
+    <string name="fna_title">Recuperar contraseña</string>
+    <string name="fna_email">Usuario</string>
+    <string name="fna_email_hint">Escribe tu nombre de usuario</string>
+    <string name="fna_botton_enter">Recuperar</string>
+    <string name="fna_title_dialog">Bien hecho</string>
+    <string name="fna_message_dialog">Se ha enviado correctamente</string>
+    <string name="fna_positive">Si</string>
+
+    <!-- Control ausentismos -->
+    <string name="ausentismo">Buscar empleado </string>
+
+    <!-- Datos lista-->
+    <string name="nombre_usuario"> Nombre</string>
+    <string name="puesto_trabajo"> Puesto</string>
+
+    <!--Menu-->
+    <string name="menu_home">Inicio</string>
+    <string name="menu_menu">Menu</string>
+
+    <!--Lista empleados-->
+    <string name="buscar_empleado">Buscar empleado</string>
+
+    <!-- Fragment Welcome-->
+    <string name="fragment_welcome">Bienvenido fragment</string>
+    <string name="welcome_est">Relación de asistencia</string>
+    <string name="welcome_time">Tiempo</string>
+    <string name="welcome_time_hours">Horas</string>
+    <string name="welcome_cost">Costo</string>
+    <string name="month1">Enero</string>
+    <string name="month2">Febrero</string>
+    <string name="month3">Marzo</string>
+    <string name="month4">Abril</string>
+    <string name="month5">Mayo</string>
+    <string name="month6">Junio</string>
+    <string name="month7">Julio</string>
+    <string name="month8">Agosto</string>
+    <string name="month9">Septiembre</string>
+    <string name="month10">Octubre</string>
+    <string name="month11">Noviembre</string>
+    <string name="month12">Diciembre</string>
+    <string name="kardex_title">kardex del mes de Enero del Año 2023</string>
+    <string name="kardex_title1">Kardex del mes de </string>
+    <string name="kardex_title2">del Año</string>
+    <string name="encabezado_days">Días</string>
+    <string name="welcome_kardex">No se han podido leer los datos por que no se encuentran</string>
+    <string name="welcome_kardexSN">No hay registros para el mes seleccionado</string>
+
+    <!-- Fragment Opciones-->
+    <string name="fragment_opciones">Supervisor</string>
+    <string name="menup_1">Control de Ausentismos</string>
+    <string name="menup_2">Administración de Tiempos</string>
+    <string name="menup_3">Configuracion</string>
+    <string name="submenu_1">Salida de vacaciones</string>
+    <string name="submenu_2" tools:ignore="Typos">Programacion anual de vacaciones</string>
+    <string name="submenu_22">Autorización de vacaciones</string>
+    <string name="submenu_3">Ausentismos</string>
+    <string name="submenu_4">Permisos</string>
+    <string name="submenu_5" tools:ignore="Typos">Kardex anual</string>
+    <string name="submenu_6">Kardex mensual</string>
+    <string name="submenu_7">Reportes</string>
+    <string name="submenu_8">Información general</string>
+    <string name="submenu_9">Negociación de horario</string>
+    <string name="submenu_10">Entradas y salidas / Autorización concepto</string>
+    <string name="submenu_101">Entradas y salidas masivas</string>
+    <string name="submenu_11">Preautorización de tiempos extra</string>
+    <string name="submenu_12">Reportes.</string>
+    <string name="submenu_13">Acerca de Human RHD</string>
+    <string name="submenu_14">Cerrar sesion</string>
+    <string name="signoff_title">Cerrar sesión</string>
+    <string name="signoff_message">¿Estas seguro que quieres salir de la App?</string>
+    <string name="signoff_postive">Si</string>
+    <string name="signoff_negative">No</string>
+    <string name="ok">OK</string>
+    <string name="no_hay_lista">No hay lista de usuarios</string>
+
+    <!-- Fragment Menu Control de Ausentismos-->
+    <string name="menu_title">Reportes</string>
+    <string name="menu_caption">Control de ausentismos</string>
+    <string name="menu_vacaciones">Vacaciones</string>
+    <string name="menu_posible_falta">Posible falta</string>
+    <string name="menu_incapacidades">Incapacidades</string>
+    <string name="menu_ausentismos">Ausentismos</string>
+    <string name="menu_permisos">Permisos</string>
+    <string name="menu_reporte_estaciones_libres">Reportes de estaciones libres</string>
+
+    <!-- Fragment Reporte de vacaciones control Ausentismo-->
+    <string name="rvacacionesca">Periodo</string>
+
+    <!-- Fragment Reporte de Permisos control Ausentismo-->
+    <string name="rpca">Seleccionar</string>
+    <string name="rpcaCancel">Cancelar</string>
+    <string name="rpcaSelArea">Todos</string>
+    <string name="rpcaSelCentro">Todos</string>
+    <string name="rpcaSelLinea">Todos</string>
+    <string name="rpcaenvio">Envio exitoso</string>
+    <string name="rpcaSearch">Buscar empleado</string>
+    <string name="rangoDeFechas">El rango de fechas es incorrecto</string>
+
+    <!-- Fragment Reporte de Permisos control Ausentismo VIEW-->
+    <string name="vrpcaInicio">Inicio</string>
+    <string name="vrpcaFin">Inicio</string>
+    <string name="vrpcaDepartamento">Departamento</string>
+    <string name="vrpcaArea">Area</string>
+    <string name="vrpcaSeleArea">Selecciona una area</string>
+    <string name="vrpcaCentro">Centro</string>
+    <string name="vrpcaSeleCentro">Selecciona un centro</string>
+    <string name="vrpcaLinea">Linea</string>
+    <string name="vrpcaSeleLinea">Selecciona una linea</string>
+    <string name="vrpcaTodos">Todos</string>
+    <string name="vrpcaFormato">Formato de reporte</string>
+    <string name="vrpcaRetardos">Retardos</string>
+    <string name="vrpcaUsuarios">Usuarios</string>
+
+    <!-- Fragment Reporte Holiday control Ausentismo-->
+    <string name="rhca">Seleccionar solo una opcion</string>
+    <string name="sin_infomacion">Sin informacion disponible</string>
+
+    <!-- Fragment Reporte Holiday control Ausentismo View-->
+    <string name="vrhcaProgramacion">Programacion</string>
+    <string name="vrhcaSalidas">Salidas</string>
+    <string name="vrhcaUsuarios">Usuarios</string>
+
+    <!-- Fragment Kardex Mensual-->
+    <string name="kmDescansos">Descansos</string>
+    <string name="kmFestivos">Festivos</string>
+    <string name="kmAusentismos">Ausentismos</string>
+    <string name="kmRetardo">Retardo</string>
+
+    <!-- Fragment Permisos-->
+    <string name="fpTitulo">Alta de permisos</string>
+    <string name="fpRegistrar">Registrar</string>
+    <string name="fpNuevaSolicitud">Nueva solicitud</string>
+    <string name="fpConcepto">Concepto:</string>
+    <string name="fpFecha">Fecha:</string>
+    <string name="fpHoraInicio">Hora inicio:</string>
+    <string name="fpHoraFin">Hora fin:</string>
+    <string name="fpComentarios">Comentarios:</string>
+    <string name="fpObservaciones">Observaciones:</string>
+    <string name="fpMotivo">Motivo:</string>
+
+    <!-- Fragment Ausentismos-->
+    <string name="faTitulo">Alta de ausentismos</string>
+    <string name="faMotivo">Motivo</string>
+    <string name="faFechaInicial">Fecha inicial:</string>
+    <string name="faDias_sp">Días</string>
+    <string name="faDias">Días:</string>
+    <string name="faDia">1 Día</string>
+
+    <!-- Fragment Programacion anual vacaciones-->
+    <string name="fpavTitulo" tools:ignore="Typos">Programacion anual de vacaciones</string>
+    <string name="fpaSolicitar">Solicitar</string>
+    <string name="fpaListaSolicitud">Ir a Lista de solicitudes</string>
+    <string name="fpaAl">al</string>
+    <string name="fpaGrupo">Grupo</string>
+    <string name="fpaFactor">Factor:</string>
+    <string name="fpaDiasTomados">Dias Tomados:</string>
+
+    <!-- Fragment Vacaciones-->
+    <string name="fvTitulo">Alta de vacaciones</string>
+    <string name="fvDiasVacaciones">Dias de vacaciones</string>
+    <string name="fvDiasPorDisfrutar">Días por disfrutar:</string>
+    <string name="fvSeleccionarFecha">Seleccionar fecha</string>
+    <string name="f">Faltas</string>
+    <string name="v">Día de vacaciones</string>
+    <string name="others">Día inactivo</string>
+    <string name="descansos">Día de descanso</string>
+    <string name="Festivos">Día festivo</string>
+    <string name="Ausentismos">Día de ausentismo</string>
+    <string name="Retardos">Retardo</string>
+    <string name="otros">Todas las fechas no se pueden seleccionar</string>
+
+    <!-- Fragment Kardex Anual-->
+    <string name="kaMeses">Meses</string>
+    <string name="kaEnero">Enero</string>
+    <string name="kaFebrero">Febrero</string>
+    <string name="kaMarzo">Marzo</string>
+    <string name="kaAbril">Abril</string>
+    <string name="kaMayo">Mayo</string>
+    <string name="kaJunio">Junio</string>
+    <string name="kaJulio">Julio</string>
+    <string name="kaAgosto">Agosto</string>
+    <string name="kaSeptiembre">Septiembre</string>
+    <string name="kaOctubre">Octubre</string>
+    <string name="kaNoviembre">Noviembre</string>
+    <string name="kaDiciembre">Diciembre</string>
+
+    <!-- Fragment Menu Administracion de tiempos-->
+    <string name="menuAT_caption">Administración de tiempos</string>
+    <string name="menuAT_entradas_salidas">Vacaciones</string>
+
+    <!--   Administracion de tiempos - Informacion general -->
+    <string name="titletoolbar">Información general</string>
+    <string name="label_solicitud">Nueva solicitud</string>
+    <string name="label_edit_solicitud">Editar solicitud</string>
+    <string name="label_fecha">Fecha de aplicación:</string>
+    <string name="labe_gafete">Gafete:</string>
+    <string name="save">Guardar</string>
+    <string name="edit">Editar</string>
+    <string name="hind_gafete">0000</string>
+    <string name="Calendario">Calendario</string>
+    <string name="asignacion">Asignacion de:</string>
+    <string name="label_rol">Rol:</string>
+    <string name="label_turno">Turno:</string>
+    <string name="label_radio_rol">Rol</string>
+    <string name="label_radio_turno">Turno</string>
+    <string name="label_dias">Días:</string>
+    <string name="label_calendario">Calendario:</string>
+    <string name="agregar_gafete">Agregar un gafete</string>
+    <string name="Seleccionar_opcion_calendario">Seleccionar una opcion de calendario</string>
+    <string name="Seleccionar_opcion_rol">Seleccionar una opcion de rol</string>
+    <string name="Seleccionar_opcion_turno">Seleccionar una opcion de turno</string>
+
+
+    <!--    administracionn de tiempos - Negociación de horarios-->
+    <string name="label_negociacion">Nueva negociación</string>
+    <string name="label_edit_negociacion">Editar negociación</string>
+    <string name="label_fecha_inicio">Fecha inicio:</string>
+    <string name="label_fecha_fin">Fecha fin:</string>
+    <string name="label_are">Area: </string>
+    <string name="label_cen">Centro:</string>
+    <string name="label_linea">Linea: </string>
+    <string name="label_categorias">Categoria:</string>
+    <string name="hind_categoria">Seleccione la categoría</string>
+    <string name="label_zona">Zona:</string>
+    <string name="hind_zona">Seleccione la zona</string>
+    <string name="label_hind_todos">Todos</string>
+
+    <!--    Administracion de horarios - Entradas y Salidas-->
+    <string name="fecha1">Fecha</string>
+    <string name="Mes">Mes</string>
+    <string name="hind_mes">Seleccione un mes</string>
+    <string name="año">Año</string>
+    <string name="hind_anio">Selecciona el año</string>
+    <string name="label_entrada">Entrada</string>
+    <string name="hind_hora">00:00</string>
+    <string name="label_salida">Salida</string>
+    <string name="label_estacion">Estación</string>
+    <string name="hind_estacion">Seleccione la estación</string>
+    <string name="formatoFecha">00/00/0000</string>
+    <string name="label_departamento">Departamento:</string>
+    <string name="hind_departamento">Seleccione el departamento</string>
+    <string name="seleccionar_hora_entrada">Seleccionar una hora de entrada</string>
+    <string name="seleccionar_hora_salida">Seleccionar una hora de salida</string>
+
+    <!--    dias de la semana-->
+    <string name="lunes">Lunes</string>
+    <string name="martes">Martes</string>
+    <string name="miercoles">Miercoles</string>
+    <string name="jueves">Jueves</string>
+    <string name="viernes">Viernes</string>
+    <string name="sabado">Sabado</string>
+    <string name="Domingo">Domingo</string>
+
+    <!-- Fragment Reporte entradas y salidas-->
+    <string name="ATentradas_salidas">Entradas y salidas</string>
+    <string name="ATentradas_salidas_x_concepto">Entradas y salidas por concepto</string>
+    <string name="ATFormato_de_Reporte">Formato de Reporte</string>
+    <string name="ATImpresion_por_Empleado">Impresion por empleado</string>
+    <string name="ATEmpleados_inactivos">Empleados inactivos</string>
+    <string name="ATMR_activo">MR activo</string>
+    <string name="ATRetardos">Retardos</string>
+    <string name="ATRelacion_inasistencia">Relacion de inasistencia</string>
+
+    <!-- Fragment Reporte tarjeta de empleados-->
+    <string name="ATtarjeta_empleados">Tarjeta de empleados</string>
+
+    <!-- Fragment Reporte Ausentismo-->
+    <string name="ATAusentismo">Ausentismo</string>
+
+    <!-- Fragment Reporte Horas laboradas-->
+    <string name="ATHoras_laboradas">Horas laboradas</string>
+    <string name="ATCuenta_Contable">Cuenta Contable</string>
+
+    <!-- Fragment Reporte Asistencia Organigrama-->
+    <string name="ATAsistencia_Organigrama">Asistencia Organigrama</string>
+    <string name="ATVisualizacion_de_informacion">Visualizacion de informacion</string>
+    <string name="ATGeneral">General</string>
+    <string name="ATDetalle">Detalle</string>
+    <string name="ATInicio">Inicio</string>
+    <string name="ATFin">Fin</string>
+    <string name="ATTurno">Turno</string>
+    <string name="ATRol">Rol</string>
+
+    <!-- Fragment Reporte Control Asistencia-->
+    <string name="ATControl_Asistencia">Control asistencia</string>
+    <string name="ATTipo_de_reporte">Tipo de reporte:</string>
+    <string name="ATTipo_de_reporte_hint">Descripcion por empleado</string>
+
+    <!-- Fragment Reporte Dias por Disfrutar-->
+    <string name="ATDias_por_Disfrutar">Dias por disfrutar</string>
+    <string name="ATAnio">Año:</string>
+
+    <!-- Fragment Reporte Seguridad Vigilancia-->
+    <string name="ATSeguridad_Vigilancia">Seguridad vigilancia</string>
+    <string name="ATNegociacion_Horario">Negociacion horario</string>
+    <string name="ATTiempo_extra">Tiempo extra</string>
+
+    <!--Identificadores de mensaje-->
+
+    <!--Dialogs-->
+    <string name="dialog_title">Aviso</string>
+    <string name="dialog_positive">Aceptar</string>
+
+    <!--Login-->
+
+    <string name="RHD001">No existe el numero de cia ingresado</string>
+    <string name="RHD002">No existe el numero de empleado ingresado</string>
+    <string name="RHD003">El numero de compañía es incorrecto</string>
+    <string name="RHD004">El numero de empleado es incorrecto</string>
+    <string name="RHD008">El empleado tiene una Negociacion para las fechas solicitadas</string>
+    <string name="RHD010">El usuario es obligatorio</string>
+    <string name="RHD011">El password es obligatorio</string>
+    <string name="RHD012">El valor correspondiente al usuario es incorrecto</string>
+    <string name="RHD013">El usuario no cuenta con una licencia ECO, reportelo con su ejecutivo</string>
+    <string name="RHD014">El password es incorrecto</string>
+    <string name="RHD015">El usuario no cuenta con privilegios para acceder a la compañia</string>
+    <string name="RHD016">El usuario no existe en el Human eLand</string>
+    <string name="RHD017">El usuario no se encuentra activo en Human eLand</string>
+    <string name="RHD018">El usuario se encuentra inactivo en Human eLand</string>
+    <string name="RHD019">El usuario se encuentra bloqueado en Human eLand</string>
+    <string name="RHD025">El anio no es valido</string>
+    <string name="RHD026">El concepto de ausentismo es obligatorio</string>
+    <string name="RHD027">Se debe de enviar almenos una fecha.</string>
+    <string name="RHD028">La captura de ausentismos debe realizarse en secuencias completas</string>
+    <string name="RHD029">No es posible marcar secuencias con días de descanso involucrados</string>
+    <string name="RHD030">EL dia ya cuenta con una marca en el kardex</string>
+    <string name="RHD031">No es posible capturar una nueva secuencia de ausentismo para los días de un mismo motivo de ausentismo</string>
+    <string name="RHD032">El empleado no cuenta con un contrato.</string>
+    <string name="RHD033">El rango de fechas esta fuera del contrato.</string>
+    <string name="RHD034">El ausentismo no existe</string>
+    <string name="RHD035">El concept de ausentismo no existe</string>
+    <string name="RHD036">El concepto es incorrecto</string>
+    <string name="RHD037">No existe contrato para el día</string>
+    <string name="RHD038">No es posible agregar el ausentismo</string>
+    <string name="RHD039">La captura de ausentismos debe realizarse en secuencias completas</string>
+    <string name="RHD040">El número de días permitidos para capturar o modificar un ausentismo anterior es de:</string>
+    <string name="RHD041">No se eligió una secuencia de días</string>
+    <string name="RHD042">La inserción de un registro en estatus baja no surgirá efecto</string>
+    <string name="RHD043">No es posible capturar un ausentismo en días de descanso ó festivos.</string>
+    <string name="RHD044">No se puede Remarcar el Kardex con días de Vacaciones, pertenece a los conceptos no remarcables</string>
+    <string name="RHD045">La selección de fechas no es válido</string>
+    <string name="RHD046">Existen diferentes motivos de ausentismos en la secuencia seleccionada</string>
+    <string name="RHD047">Motivo no encontrado</string>
+    <string name="RHD051">El periodo  es incorrecto.</string>
+    <string name="RHD052">La fecha de inicio de vacaciones es incorrecta.</string>
+    <string name="RHD053">Alguno de los conceptos del grupo 339 no existen en el catalogo.</string>
+    <string name="RHD054">El kardex se encuentra ocupado para alguno de los días.</string>
+    <string name="RHD055">Error al afectar el Kardex para el empleado.</string>
+    <string name="RHD056">La fecha no se logró marcar, ya que no cuenta con días suficientes para el actual periodo.</string>
+    <string name="RHD057">La fecha excede la fecha de vencimiento.</string>
+    <string name="RHD058">El periodo no existe.</string>
+    <string name="RHD059">El valor de días pagados es incorrecto. </string>
+    <string name="RHD060">El valor de días pagados es incorrecto. </string>
+    <string name="RHD065">Ya se encuentra el dia ocupado en Kardex para la fecha</string>
+    <string name="RHD066">El valor de concepto permiso es incorrecto. </string>
+    <string name="RHD067">El concepto no existe.</string>
+    <string name="RHD068">Ya se encuentra un permiso registrado para la fecha </string>
+    <string name="RHD069">El valor de minutos permiso es incorrecto. </string>
+    <string name="RHD070">El valor de horas permiso es incorrecto. </string>
+    <string name="RHD071">Coloque una descripción en las del permiso</string>
+    <string name="RHD072">No existe el permiso para la fecha ingresada</string>
+    <string name="RHD073">Favor de especificar el usuario </string>
+    <string name="RHD075">El valor de concepto ausentismo es incorrecto</string>
+    <string name="RHD076">El valor del año ingresado es incorrecto</string>
+    <string name="RHD077">El concepto ausentismo no existe</string>
+    <string name="RHD078">El valor del mes ingresado es incorrecto</string>
+    <string name="RHD079">Especifique solo el concepto de ausentismo o la marca de ausentismo</string>
+    <string name="RHD080">No existen registros disponibles</string>
+    <string name="RHD083">El valor de la clave calendario es incorrecto</string>
+    <string name="RHD084">El valor de la clave rol horario es incorrecto</string>
+    <string name="RHD085">El valor de la clave turno es incorrecto</string>
+    <string name="RHD086">Especifique el nombre de usuario</string>
+    <string name="RHD087">El numero gafete es incorrecto</string>
+    <string name="RHD088">No se puede capturar un movimento con 15 días anteriores a la fecha actual.</string>
+    <string name="RHD089">Debe seleccionar Rol ó Turno</string>
+    <string name="RHD090">No se pueden guardar registros nuevos con estatus Baja, favor de activarlos</string>
+    <string name="RHD091">Existe un registro posterior a la fecha actual.</string>
+    <string name="RHD092">La fecha de aplicación capturada ya se encuentra registrada.</string>
+    <string name="RHD093">El numero gafete ya se encuentra asignado a otro empleado</string>
+    <string name="RHD094">No existe la clave calendario ingresada</string>
+    <string name="RHD095">No existe la clave rol horario ingresada</string>
+    <string name="RHD096">No existe la clave turno ingresada</string>
+    <string name="RHD097">Debe especificar solo Rol ó Turno</string>
+    <string name="RHD098">La fecha de aplicación ingresada no se encuentra registrada</string>
+    <string name="RHD099">Debe de especificar la fecha clave calendario </string>
+    <string name="RHD101">No existe la cond1 ingresada</string>
+    <string name="RHD102">No existe la cond2 ingresada</string>
+    <string name="RHD103">No existe la cond3 ingresada</string>
+    <string name="RHD104">No existe la cond4 ingresada</string>
+    <string name="RHD105">No existe la cond5 ingresada</string>
+    <string name="RHD106">No existe la cond6 ingresada</string>
+    <string name="RHD107">No existe la cond7 ingresada</string>
+    <string name="RHD108">No existe la cond8 ingresada</string>
+    <string name="RHD109">No existe la cond9 ingresada</string>
+    <string name="RHD110">No existe la cond10 ingresada</string>
+    <string name="RHD111">Debe capturar al menos una estación activa para el Gafete</string>
+    <string name="RHD112">No se encontraron coincidencias para el gafete</string>
+    <string name="RHD116">La clave estación es incorrecta</string>
+    <string name="RHD117">No existe la clave estación ingresada</string>
+    <string name="RHD120">La negociación horario que desea eliminar no existe</string>
+    <string name="RHD121">La fecha de término no puede tener un valor menor que la de inicio.</string>
+    <string name="RHD122">Debe capturar: “ únicamente una negociación de horario por día y ya exite otra excepción con la misma fecha de inicio ”.</string>
+    <string name="RHD123">Debe seleccionar Rol de turnos ó Turno</string>
+    <string name="RHD124">Debe especificar solo Rol de turnos ó Turno</string>
+    <string name="RHD125">El valor de la clave rol de turnos es incorrecto</string>
+    <string name="RHD126">No existe la clave rol turnos ingresada</string>
+    <string name="RHD127">Especifique la clave categoria</string>
+    <string name="RHD128">El valor de la zona es incorrecto</string>
+    <string name="RHD129">No existe la clave categoria ingresada</string>
+    <string name="RHD130">No existe la zona ingresada</string>
+    <string name="RHD131">Especifique el área del departamento </string>
+    <string name="RHD132">Especifique el centro del departamento </string>
+    <string name="RHD133">Especifique la linea del departamento </string>
+    <string name="RHD134">No se encontró departamento con los datos de área, centro y línea ingresados</string>
+    <string name="RHD135">La fecha de inicio ingresada no se encuentra registrada</string>
+    <string name="RHD137">Debe Capturar únicamente una negociación de horario por dia y ya existe otra excepción con la misma fecha de inicio</string>
+    <string name="RHD140">No existe una pre-autorización de tiempo extra con la fecha ingresada</string>
+    <string name="RHD141">Ya existe una pre-autorización de tiempo extra con la fecha ingresada</string>
+    <string name="RHD151">La estación es obligatorio</string>
+    <string name="RHD152">El gafete es obligatorio</string>
+    <string name="RHD153">El estatus es incorrecto</string>
+    <string name="RHD154">La estación solo puede ser de tipo</string>
+    <string name="RHD155">El valor, ya existe para la columna</string>
+    <string name="RHD156">No es posible actualizar la estación, sin gafete asignado</string>
+    <string name="RHD201">El parametro autorizado solo permite los valores A y *.</string>
+    <string name="RHD202">El parametro estatus solo permite los valores A y B.</string>
+    <string name="RHD203">La autorización de concepto de tiempo masivo desea actualizar no existe.</string>
+    <string name="RHD204">El valor del parámetro vt1 es incorrecto</string>
+    <string name="RHD205">El valor del parámetro vt2 es incorrecto</string>
+    <string name="RHD206">El valor del parámetro vt3 incorrecto</string>
+    <string name="RHD207">El valor del parámetro vt4 es incorrecto</string>
+    <string name="RHD208">El valor capturado debe ser menor o igual al generado por el cálculo</string>
+    <string name="RHD209">No se puede autorizar el registro para el empleado, concepto y fecha, debido a que no cuenta con motivo de Autorización</string>
+    <string name="RHD210">Motivo de autorización incorrecto</string>
+    <string name="RHD211">No se puede Preautorizar desde aquí un movimiento</string>
+    <string name="RHD212">La fecha de inicio es incorrecta</string>
+    <string name="RHD213">La fecha de termino del reporte es incorrecta</string>
+    <string name="RHD220">El año es incorrecto.</string>
+    <string name="RHD221">El mes es incorrecto.</string>
+    <string name="RHD226">Desactive la supervisión directa para seleccionar un usuario</string>
+    <string name="RHD400">No hay resultados para el criterio de búsqueda ingresado</string>
+    <string name="RHD401">Es necesario especificar un proceso o una fecha de recuperación</string>
+    <string name="RHD402">El usuario supervisor es incorrecto</string>
+    <string name="RHD403">Es necesario especificar los conceptos del reporte de entradas y salidas</string>
+    <string name="RHD404">El proceso, periodo y año es incorrecto</string>
+    <string name="RHD405">El proceso, periodo y año no existe en la base de datos de Human</string>
+    <string name="RHD406">El tipo de reporte es incorrecto</string>
+    <string name="RHD407">El usuario no tiene empleados asignados</string>
+    <string name="RHD408">Error al recuperar el departamento en el reporte </string>
+    <string name="RHD409">Error al recuperar el puesto en el reporte </string>
+    <string name="RHD410">Error al recuperar el turno en el reporte </string>
+    <string name="RHD411">El grupo es incorrecto</string>
+    <string name="RHD412">El grupo no se encuentra dentro de los catalogos de Human eLand</string>
+    <string name="RHD413">La fecha de inicio es incorrecta</string>
+    <string name="RHD414">La fecha de termino es incorrecta</string>
+    <string name="RHD415">El número máximo de retardo es incorrecto</string>
+    <string name="RHD420">Fecha fin no puede ser menor a la fecha de inicio ingresada</string>
+    <string name="RHD421">El campo {nombreCampo} es mandatorio y no puede ser nulo.</string>
+    <string name="RHD422">No se encontraron valores correspondientes.</string>
+    <string name="RHD423">fecha anterior a 120 dias.</string>
+    <string name="RHD424">El total de dias a tomar es mayor al total de dias disponibles por disfrutar</string>
+    <string name="RHD425">No existen registros que correspondan con el criterio de búsqueda en la tabla.</string>
+    <string name="RHD426">La fecha inicio no puede ser mayor o futura a la fecha actual</string>
+    <string name="RHD427">No se puede programar una fecha anterior a la actual</string>
+    <string name="RHD428">No se puede programar la fecha</string>
+    <string name="RHD429">No existen registros que corresponden con el criterio de búsqueda: para el maestro de empleados</string>
+    <string name="RHD430">Es necesario que la fecha se encuentre en el rango correspondiente</string>
+    <string name="RHD431">No se puede capturar marcajes fuera del periodo de recuperación de datos</string>
+    <string name="RHD432">No se pueden agregar o modificar registros de Entradas y Salidas con fechas anteriores al periodo de cálculo del proceso seleccionado.</string>
+    <string name="RHD433">Existen marcajes de entrada repetidos.</string>
+    <string name="RHD434">Existen marcajes de salida repetidos.</string>
+    <string name="RHD450">No hay días disponibles</string>
+    <string name="RHD451">No se puede capturar secuencia, empleado sin contrato para alguna fecha a capturar</string>
+
+    <!--Errores BD-->
+    <string name="BD003">Error al consultar en base de datos.</string>
+    <string name="BD100">Error al consultar la compañía</string>
+    <string name="BD101">Ocurrió un error al consultar el servicio empleados</string>
+    <string name="BD400">Ocurrió un error al consultar el servicio de estaciones empleados</string>
+    <string name="BD401">Ocurrió un error al actualizar la estación empleado</string>
+    <string name="BD402">Ocurrió un error al consultar las vacaciones</string>
+    <string name="BD403">Ocurrió un error al intentar crear el proceso de vacaciones del empleado</string>
+    <string name="BD404">Ocurrió un error al intentar crear una nueva secuencia en el proceso de vacaciones del empleado</string>
+    <string name="BD405">Ocurrió un error al consultar los motivos de permiso</string>
+    <string name="BD406">Ocurrió un error al consultar los permisos</string>
+    <string name="BD407">Ocurrió un error al intentar insertar el permiso</string>
+    <string name="BD408">Ocurrió un error al intentar actualizar el permiso</string>
+    <string name="BD409">Ocurrió un error al consultar los motivos de ausentismos en kardex</string>
+    <string name="BD410">Ocurrió un error al consultar el servicio de kardex</string>
+    <string name="BD411">Ocurrió un error al consultar el calendario en el servicio CT</string>
+    <string name="BD412">Ocurrió un error al consultar el rol horario en el servicio CT</string>
+    <string name="BD413">Ocurrió un error al consultar el turno en el servicio CT</string>
+    <string name="BD414">Ocurrió un error al consultar las condiciones en el servicio Parametros</string>
+    <string name="BD415">Ocurrió un error al consultar el servicio Mr</string>
+    <string name="BD416">Ocurrió un error al intentar insertar el Mr</string>
+    <string name="BD417">Ocurrió un error al intentar actualizar el Mr</string>
+    <string name="BD418">Ocurrió un error al consultar el servicio RH</string>
+    <string name="BD419">Ocurrió un error al intentar eliminar el registro en RH</string>
+    <string name="BD420">Ocurrió un error al consultar el servicio Parametros</string>
+    <string name="BD421">Ocurrió un error al intentar dar de alta el registro en RH</string>
+    <string name="BD422">Ocurrió un error al intentar actualizar el registro en RH</string>
+    <string name="BD423">Ocurrio un error al intentar generar el reporte en jasper</string>
+    <string name="BD424">Ocurrió un error al consultar la tabla RV en el servicio RT</string>
+    <string name="BD425">Ocurrió un error al intentar actualizar el registro en RV</string>
+    <string name="BD426">Ocurrió un error al consultar el servicio RT</string>
+    <string name="BD427">Ocurrió un error al intentar dar de alta el registro en RT</string>
+    <string name="BD428">Ocurrió un error al intentar actualizar el registro en RT</string>
+    <string name="BD429">Ocurrió un error al intentar eliminar el registro en RT</string>
+    <string name="BD430">Ocurrió un error al consultar los días vacaciones en el micro CT</string>
+    <string name="BD431">Ocurrió un error al consultar los días descanso en el micro CT</string>
+    <string name="BD432">Ocurrio un error al intentar generar el reporte de empleados sin negociación de horario</string>
+    <string name="BD433">Ocurrio un error al intentar generar el reporte de pre-nómina</string>
+    <string name="BD434">Ocurrio un error al intentar generar el reporte de tiempo laborado</string>
+    <string name="BD435">Ocurrio un error al intentar generar el reporte de analisis departamental</string>
+    <string name="BD436">Ocurrió un error al actualizar el ausentismo</string>
+    <string name="RH400">Los dias de vacaciones son obligatorios</string>
+    <string name="RH401">La fecha de inicio de vacaciones es incorrecta</string>
+    <string name="RH402">Alguno de los conceptos del grupo 339 no existen en el catalogo.</string>
+    <string name="RH403">El kardex se encuentra ocupado para alguno de los días .</string>
+    <string name="RH404">Error al afectar el Kardex para el empleado.</string>
+    <string name="RH405">El empleado no cuenta con saldo de vacaciones</string>
+    <string name="RH406">El supervisor no tiene empleados asignados</string>
+    <string name="RH407">La fecha de Inicio es incorrecta, favor de enviar una fecha con formato [dd/MM/yyyy])</string>
+    <string name="RH408">La fecha de Fin es incorrecta, favor de enviar una fecha con formato [dd/MM/yyyy])</string>
+    <string name="WS001">La clave de la compañía no existe</string>
+    <string name="WS002">La compañía no cuenta con empleados activos</string>
+    <string name="WS050">No existe el catalogo general de Core para recuperar el Pais</string>
+    <string name="WS003">La clave de compañía es incorrecta</string>
+    <string name="WS004">El valor corespondiente al RFC es incorrecto</string>
+    <string name="WS005">El valor corespondiente a la CURP es incorrecto</string>
+    <string name="WS006">El valor correspondiente a la cédula de identidad es incorrecto</string>
+    <string name="WS007">El valor correspondiente a la cédula de residencia es incorrecto</string>
+    <string name="WS008">La confirmacón del Nip del empleado es incorrecta</string>
+    <string name="WS009">El valor correspondiente al Cuild es incorrecto</string>
+    <string name="WS010">El valor corresponditente al Id no es incorrecto</string>
+    <string name="WS011">El valor correspondiente al RUT es incorrecto</string>
+    <string name="WS012">El valor correspondiente a la clave de identificación es incorrecto</string>
+    <string name="WS013">El valor correspondiente al DNI es incorrecto</string>
+    <string name="WS014">El valor correspondiente al NDI es incorrecto</string>
+    <string name="WS015">El nip no corresponde al que el empleado tiene registrado</string>
+    <string name="WS016">El empleado no cuenta con registros de email</string>
+    <string name="WS017">El idioma es incorrecto</string>
+    <string name="WS018">Ocurrio un error al consultar el usuario</string>
+    <string name="WS019">Ocurrio un error al consultar las companias</string>
+    <string name="WS900">Ocurrio un error al consultar los ausentismos.</string>
+    <string name="WS901">Ocurrió un error al consultar los conceptos de ausentismos.</string>
+    <string name="WS902">Ocurrió un error al consultar los motivos de ausentismos.</string>
+    <string name="EG000">Ocurrio un error en el servicio.</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="period">Periodo:</string>
+    <string name="rol_horario">Rol Horario:</string>
+    <string name="rol_de_turnos">Rol de Turnos:</string>
+    <string name="agregar_estacion">Agregar estacion</string>
+    <string name="empleado">Empleado:</string>
+
+
+</resources>
